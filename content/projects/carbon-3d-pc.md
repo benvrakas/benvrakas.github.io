@@ -18,9 +18,12 @@ Design rules from the start:
 - **Modular.** Every component (motherboard tray, GPU mount, radiators, reservoir, PSU compartment, I/O) is its own clamp-on module.
 
 :::gallery
-cad-coupler | Three-way tube coupler in Inventor
+coupler-render | Expanding three-way corner joint: tightening the bolts expands it inside the tubes
+coupler-render-2 | Joint seated in the carbon tubes
+cad-coupler | The coupler in Inventor
 printed-couplers | Printed couplers with heat-set inserts
-render-tubeio | Render of a later generation
+tube-cutting-jig | Printed jig for cutting carbon tubes to repeatable lengths
+tron-render | 6000 × 6000 render of a lit "Tron" concept
 :::
 
 :::youtube b5MX7NRM8cU | Modular radiator: CAD timelapse
@@ -49,7 +52,10 @@ I documented the build on Reddit, where the series has drawn **well over 20,000 
 
 The first prototype took about 80 hours of design. Early versions used large printed compartments and acrylic panels. I settled on a prism of carbon tubes as the frame, with modules clamped on, a custom water-cooling loop and an expanding three-way coupler.
 
+That 2019 "dream build" ran a Ryzen 7 2700X and a Vega 64 with full hardline cooling and a 420 mm radiator. For the GPU I converted the Vega 64's stock AIO to a full-cover loop using printed parts.
+
 :::gallery
+vega-waterblock | Vega 64 AIO converted to the loop with printed parts
 v1-2019 | First build: acrylic panels and a custom loop
 v1-2019-side | Side view
 render-v1 | Inventor render of the layout

@@ -4,6 +4,8 @@
  "fireplace-2": "2021-08",
  "fireplace-beam": "2021-08",
  "fireplace-milling": "2021-06",
+ "gpu-mount": "2024-05",
+ "gpu-mount-2": "2024-05",
  "hyperx-clasp": "2025-08",
  "hyperx-install": "2026-07",
  "keder-hook": "2026-07",
@@ -15,5 +17,7 @@
  "keder-wrench": "2026-07",
  "knife-real": "2021-05",
  "laptop-real": "2022-08",
- "laptop-real-2": "2022-08"
+ "laptop-real-2": "2022-08",
+ "magnetic-bins": "2024-05",
+ "magnetic-bins-2": "2024-05"
 }
