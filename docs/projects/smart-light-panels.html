@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Modular Smart Light Panels · Ben Vrakas</title>
+<meta name="description" content="Edge-lit hexagon, square and triangle panels that snap together in any layout, work out their own arrangement, and play effects mapped to the room rather than along a strip.">
+<meta property="og:title" content="Modular Smart Light Panels · Ben Vrakas">
+<meta property="og:description" content="Edge-lit hexagon, square and triangle panels that snap together in any layout, work out their own arrangement, and play effects mapped to the room rather than along a strip.">
+<meta property="og:image" content="https://benvrakas.github.io/media/smart-light-panels/room-evening.jpg">
+<link rel="icon" href="../favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="top"><div class="wrap"><a class="brand" href="../index.html"><span class="mark">BV</span>Ben Vrakas</a><nav><a href="../index.html#work">Work</a><a href="../index.html#experience">Experience</a><a href="../index.html#about">About</a><a href="https://github.com/benvrakas">GitHub</a></nav></div></header>
+<main>
+<article class="project wrap narrow">
+<a class="back" href="../index.html#work">← All work</a>
+<p class="eyebrow">2026 · in progress</p>
+<h1>Modular Smart Light Panels</h1>
+<p class="lede">Edge-lit hexagon, square and triangle panels that snap together in any layout, work out their own arrangement, and play effects mapped to the room rather than along a strip.</p>
+<ul class="chips"><li>KiCad</li><li>PCB design</li><li>CAN bus</li><li>ESP32</li><li>Mechanical design</li><li>System architecture</li></ul>
+<div class="links"><a class="btn" href="https://github.com/benvrakas/modular-smart-light-panels">Repository ↗</a></div>
+</article>
+<div class="wrap"><div class="phero"><img src="../media/smart-light-panels/room-evening.jpg" alt="Modular Smart Light Panels"></div></div>
+<article class="project wrap narrow prose">
+<p>Commercial light panels make you enter the layout by hand and treat the wall as a 2D strip. This system aims at <strong>100+ panels across several rooms</strong> (walls, ceilings, lofts) with two defining features:</p>
+<ol>
+<li><strong>Self-configuring.</strong> Panels snap together in any arrangement. The system discovers the full topology (which panel touches which, through which edge) and each panel's orientation, with no manual setup.</li>
+<li><strong>Room-scale 3D effects.</strong> Animations live in room coordinates, a sparse 3D voxel space, so effects flow continuously across walls and ceilings.</li>
+</ol>
+<figure class="video"><video src="../media/smart-light-panels/effects-closeup.mp4" poster="../media/smart-light-panels/effects-closeup.jpg" autoplay muted loop playsinline preload="metadata"></video><figcaption>Rendered effect playback on a mixed cluster</figcaption></figure>
+
+<h2>Architecture</h2>
+<ul>
+<li><strong>Edge-lit optics.</strong> Inward-facing RGBW LEDs on the perimeter boards light a shallow air gap with a white back reflector and a thin diffuser film. All shapes share a ≈100 mm edge, so triangles, squares and hexagons tile together. A hexagon fits on a common 220–256 mm print bed.</li>
+<li><strong>Passive edge boards.</strong> Each side of a polygon is an identical straight PCB carrying LEDs, an ID resistor that encodes its position, and ten plated contacts. Board length per shape follows from the corner angle and a fixed seam inset.</li>
+<li><strong>One controller per panel.</strong> A small 4-layer board (MCU, CAN transceiver, 24→5 V converter, LED rail switch, protection) sits behind the light chamber. One design serves every shape.</li>
+<li><strong>Spring-contact bridges.</strong> A thin double-sided bridge PCB stands in the seam between panels, and low-cost SMT springs press on both panels' contacts. A printed clip snaps across the back of the seam with zero play.</li>
+<li><strong>Network.</strong> Panels on one surface share a CAN segment owned by a snap-on ESP32 cluster controller, which bridges to Wi-Fi. A coordinator holds the room layout and runs the voxel engine.</li>
+</ul>
+<div class="gallery"><figure><a href="../media/smart-light-panels/exploded-hex.jpg" class="lb"><img src="../media/smart-light-panels/exploded-hex_t.jpg" alt="Exploded hexagon: diffuser, frame, edge boards and back plate" loading="lazy"></a><figcaption>Exploded hexagon: diffuser, frame, edge boards and back plate</figcaption></figure><figure><a href="../media/smart-light-panels/cad-assembly.jpg" class="lb"><img src="../media/smart-light-panels/cad-assembly_t.jpg" alt="Mixed cluster in CAD" loading="lazy"></a><figcaption>Mixed cluster in CAD</figcaption></figure><figure><a href="../media/smart-light-panels/seam-section.jpg" class="lb"><img src="../media/smart-light-panels/seam-section_t.jpg" alt="Section through a seam: bridge PCB and spring contacts" loading="lazy"></a><figcaption>Section through a seam: bridge PCB and spring contacts</figcaption></figure></div>
+
+<h2>Boards</h2>
+<div class="gallery g2"><figure><a href="../media/smart-light-panels/pcb-controller.jpg" class="lb"><img src="../media/smart-light-panels/pcb-controller_t.jpg" alt="Per-panel controller board" loading="lazy"></a><figcaption>Per-panel controller board</figcaption></figure><figure><a href="../media/smart-light-panels/pcb-edge.jpg" class="lb"><img src="../media/smart-light-panels/pcb-edge_t.jpg" alt="Hexagon edge board: LEDs, ID circuit and seam contacts" loading="lazy"></a><figcaption>Hexagon edge board: LEDs, ID circuit and seam contacts</figcaption></figure><figure><a href="../media/smart-light-panels/pcb-spring-coupon.jpg" class="lb"><img src="../media/smart-light-panels/pcb-spring-coupon_t.jpg" alt="Test coupon for qualifying the spring contacts" loading="lazy"></a><figcaption>Test coupon for qualifying the spring contacts</figcaption></figure><figure><a href="../media/smart-light-panels/pcb-controller-layout.jpg" class="lb"><img src="../media/smart-light-panels/pcb-controller-layout_t.jpg" alt="Controller board layout" loading="lazy"></a><figcaption>Controller board layout</figcaption></figure></div>
+
+<h2>Effects in the room</h2>
+<p>Every image below is rendered from the design files, with effects placed in room coordinates.</p>
+<div class="gallery"><figure><a href="../media/smart-light-panels/fx-aurora.jpg" class="lb"><img src="../media/smart-light-panels/fx-aurora_t.jpg" alt="Aurora" loading="lazy"></a><figcaption>Aurora</figcaption></figure><figure><a href="../media/smart-light-panels/fx-sunset.jpg" class="lb"><img src="../media/smart-light-panels/fx-sunset_t.jpg" alt="Sunset" loading="lazy"></a><figcaption>Sunset</figcaption></figure><figure><a href="../media/smart-light-panels/fx-ocean.jpg" class="lb"><img src="../media/smart-light-panels/fx-ocean_t.jpg" alt="Ocean" loading="lazy"></a><figcaption>Ocean</figcaption></figure><figure><a href="../media/smart-light-panels/fx-fire.jpg" class="lb"><img src="../media/smart-light-panels/fx-fire_t.jpg" alt="Fire" loading="lazy"></a><figcaption>Fire</figcaption></figure><figure><a href="../media/smart-light-panels/max-night.jpg" class="lb"><img src="../media/smart-light-panels/max-night_t.jpg" alt="Maximum brightness, night" loading="lazy"></a><figcaption>Maximum brightness, night</figcaption></figure><figure><a href="../media/smart-light-panels/vertical-corner.jpg" class="lb"><img src="../media/smart-light-panels/vertical-corner_t.jpg" alt="Wrapping an outside corner" loading="lazy"></a><figcaption>Wrapping an outside corner</figcaption></figure></div>
+
+<h2>Status</h2>
+<p>The design is specified in detail. Every choice is recorded as a numbered decision record, and figures are generated straight from the design files. Work is now heading toward the first physical prototype. Sister projects: <strong>Smart Light Strips</strong> (24 V RGBW strips with a custom ESP32-S3 controller) and <strong>Voxlume</strong>, which maps every LED into 3D room coordinates.</p>
+<nav class="pager"><span></span><a href="carbon-3d-pc.html">Carbon 3D Modular PC Chassis →</a></nav>
+</article>
+</main>
+<footer class="foot"><div class="wrap"><span>© 2026 Ben Vrakas</span>
+<span><a href="https://github.com/benvrakas">GitHub</a> · <a href="https://www.printables.com/@VLabs_256532">Printables</a> · <a href="https://www.thingiverse.com/benvrakas/designs">Thingiverse</a></span></div></footer>
+<div id="lightbox" hidden><img alt=""><button aria-label="Close">×</button></div>
+<script src="../site.js" defer></script>
+</body>
+</html>

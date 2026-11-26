@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Satisfactory Mods · Ben Vrakas</title>
+<meta name="description" content="More than a dozen C++ mods for the factory game Satisfactory, including signal-free train traffic control, demand-driven train dispatch and fixes for server networking bugs.">
+<meta property="og:title" content="Satisfactory Mods · Ben Vrakas">
+<meta property="og:description" content="More than a dozen C++ mods for the factory game Satisfactory, including signal-free train traffic control, demand-driven train dispatch and fixes for server networking bugs.">
+
+<link rel="icon" href="../favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="top"><div class="wrap"><a class="brand" href="../index.html"><span class="mark">BV</span>Ben Vrakas</a><nav><a href="../index.html#work">Work</a><a href="../index.html#experience">Experience</a><a href="../index.html#about">About</a><a href="https://github.com/benvrakas">GitHub</a></nav></div></header>
+<main>
+<article class="project wrap narrow">
+<a class="back" href="../index.html#work">← All work</a>
+<p class="eyebrow">2026</p>
+<h1>Satisfactory Mods</h1>
+<p class="lede">More than a dozen C++ mods for the factory game Satisfactory, including signal-free train traffic control, demand-driven train dispatch and fixes for server networking bugs.</p>
+<ul class="chips"><li>C++</li><li>Unreal Engine</li><li>Multiplayer networking</li><li>Algorithms</li><li>Reverse engineering</li></ul>
+<div class="links"><a class="btn" href="https://github.com/benvrakas?tab=repositories">GitHub ↗</a></div>
+</article>
+<div class="wrap"></div>
+<article class="project wrap narrow prose">
+<p>Satisfactory is built on Unreal Engine. Its mod loader (SML) exposes the game's C++ classes, so these mods are native C++ that hooks into game systems, replicates state to multiplayer clients, and adds UI and chat commands.</p>
+<h2>Highlights</h2>
+<h3>Auto Trains: traffic without signals</h3>
+<p>Every self-driving train books the track and switches on its route as <strong>time slots</strong> around the other trains (space-time planning). It then speeds up, slows down, waits or reroutes so that no two trains ever need the same track at the same time. Trains follow each other through roundabouts, take the fastest route given everyone's bookings, and docked trains book their departures ahead from their timetables. Nothing is written into vanilla save data.</p>
+<h3>SmartTrains: demand-driven dispatch</h3>
+<p>Platforms get a role (supply, demand or sink) and an item list. Managed trains are shared out across consumer stations in proportion to what each one needs, its consumption rate times its loop's round-trip time, and each train runs one loop: fill at the suppliers, unload at the consumer, repeat. Everything is opt-in alongside vanilla trains.</p>
+<h3>Depot Network Fix: server stability</h3>
+<p>On busy servers, the Dimensional Depot's item-count updates overflowed the reliable network buffer and got players kicked. This server-only mod merges the updates and sends them about once a second, holding back while a client is behind.</p>
+<h3>Telescreen and BoomBoxPlus: synced media</h3>
+<p><strong>Telescreen</strong> adds billboard-sized in-game screens that play the same video for every player, in sync, with 3D audio. A helper process fetches and decodes the media. <strong>BoomBoxPlus</strong> (v1.6) plays your own music, YouTube, SoundCloud and internet radio through the in-game Boom Box, synced across multiplayer with lyrics.</p>
+<h2>All mods</h2>
+<table>
+<thead>
+<tr>
+<th>Mod</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/benvrakas/AutoTrains">AutoTrains</a></td>
+<td>Train traffic control without block or path signals</td>
+</tr>
+<tr>
+<td><a href="https://github.com/benvrakas/SmartTrains">SmartTrains</a></td>
+<td>Trains dispatched from supply to demand without fixed timetables</td>
+</tr>
+<tr>
+<td><a href="https://github.com/benvrakas/FreightCarControl">FreightCarControl</a></td>
+<td>Per-stop, per-car load/unload rules in train timetables</td>
+</tr>
+<tr>
+<td><a href="https://github.com/benvrakas/VehicleSettingsCopy">VehicleSettingsCopy</a></td>
+<td>Copy and paste vehicle timetables and fuel settings</td>
+</tr>
+<tr>
+<td><a href="https://github.com/benvrakas/DepotNetworkFix">DepotNetworkFix</a></td>
+<td>Fixes "reliable buffer overflow" kicks from busy depots</td>
+</tr>
+<tr>
+<td><a href="https://github.com/benvrakas/ContinuousElevatorSync">ContinuousElevatorSync</a></td>
+<td>Keeps a server-side mechanic on factory time under load</td>
+</tr>
+<tr>
+<td><a href="https://github.com/benvrakas/ModularStationsGantryFix">ModularStationsGantryFix</a></td>
+<td>Stopgap crash fix for a popular third-party mod</td>
+</tr>
+<tr>
+<td><a href="https://github.com/benvrakas/Telescreen">Telescreen</a></td>
+<td>Synced video, browser and remote-desktop screens</td>
+</tr>
+<tr>
+<td><a href="https://github.com/benvrakas/BoomBoxPlus">BoomBoxPlus</a></td>
+<td>Your own music through the Boom Box, synced in multiplayer</td>
+</tr>
+<tr>
+<td><a href="https://github.com/benvrakas/AdaVoicePackLoader">AdaVoicePackLoader</a></td>
+<td>Loads replacement voice-line packs</td>
+</tr>
+<tr>
+<td><a href="https://github.com/benvrakas/ExactFoundationSnap">ExactFoundationSnap</a></td>
+<td>Exact rotation when snapping to foundations</td>
+</tr>
+<tr>
+<td><a href="https://github.com/benvrakas/BetterMovement">BetterMovement</a></td>
+<td>Configurable slope sliding</td>
+</tr>
+<tr>
+<td><a href="https://github.com/benvrakas/ConveyorLiftAutoConnect">ConveyorLiftAutoConnect</a></td>
+<td>Auto-connects conveyor lifts between stacked blueprints</td>
+</tr>
+</tbody>
+</table>
+<nav class="pager"><a href="v-labs-ender-3.html">← V-Labs Ender 3 &amp; RRFarm</a><a href="lunabotics.html">UWRF Lunabotics Rover →</a></nav>
+</article>
+</main>
+<footer class="foot"><div class="wrap"><span>© 2026 Ben Vrakas</span>
+<span><a href="https://github.com/benvrakas">GitHub</a> · <a href="https://www.printables.com/@VLabs_256532">Printables</a> · <a href="https://www.thingiverse.com/benvrakas/designs">Thingiverse</a></span></div></footer>
+<div id="lightbox" hidden><img alt=""><button aria-label="Close">×</button></div>
+<script src="../site.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HyperCube Evolution Printer · Ben Vrakas</title>
+<meta name="description" content="A CoreXY 3D printer I built and reworked, with my first RepRapFirmware setup and a balanced direct-drive printhead I designed and published.">
+<meta property="og:title" content="HyperCube Evolution Printer · Ben Vrakas">
+<meta property="og:description" content="A CoreXY 3D printer I built and reworked, with my first RepRapFirmware setup and a balanced direct-drive printhead I designed and published.">
+<meta property="og:image" content="https://benvrakas.github.io/media/hypercube-evolution/rebuild-2019.jpg">
+<link rel="icon" href="../favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="top"><div class="wrap"><a class="brand" href="../index.html"><span class="mark">BV</span>Ben Vrakas</a><nav><a href="../index.html#work">Work</a><a href="../index.html#experience">Experience</a><a href="../index.html#about">About</a><a href="https://github.com/benvrakas">GitHub</a></nav></div></header>
+<main>
+<article class="project wrap narrow">
+<a class="back" href="../index.html#work">← All work</a>
+<p class="eyebrow">2017 – 2019</p>
+<h1>HyperCube Evolution Printer</h1>
+<p class="lede">A CoreXY 3D printer I built and reworked, with my first RepRapFirmware setup and a balanced direct-drive printhead I designed and published.</p>
+<ul class="chips"><li>CoreXY</li><li>RepRapFirmware</li><li>Duet</li><li>Printhead design</li><li>Open source</li></ul>
+<div class="links"><a class="btn" href="https://www.thingiverse.com/thing:5377398">Printhead files (Thingiverse) ↗</a></div>
+</article>
+<div class="wrap"><div class="phero"><img src="../media/hypercube-evolution/rebuild-2019.jpg" alt="HyperCube Evolution Printer"></div></div>
+<article class="project wrap narrow prose">
+<p>The HyperCube Evolution (HEVO) is the open-source successor to the HyperCube: a CoreXY belt system built around metric T-slot extrusion.</p>
+<p>The recommended controller was a RAMPS board with cheap, loud stepper drivers. I used a <strong>Duet WiFi running RepRapFirmware</strong> instead. That was my first RRF machine, in 2017, and RRF has run my printers ever since, up to the <a href="v-labs-ender-3.html">V-Labs Ender 3</a>.</p>
+<div class="gallery"><figure><a href="../media/hypercube-evolution/build-2018.jpg" class="lb"><img src="../media/hypercube-evolution/build-2018_t.jpg" alt="First build" loading="lazy"></a><figcaption>First build</figcaption></figure><figure><a href="../media/hypercube-evolution/duet-wiring.jpg" class="lb"><img src="../media/hypercube-evolution/duet-wiring_t.jpg" alt="Duet WiFi electronics" loading="lazy"></a><figcaption>Duet WiFi electronics</figcaption></figure><figure><a href="../media/hypercube-evolution/rebuild-2019.jpg" class="lb"><img src="../media/hypercube-evolution/rebuild-2019_t.jpg" alt="2019 rebuild" loading="lazy"></a><figcaption>2019 rebuild</figcaption></figure></div>
+
+<h2>Balanced direct-drive printhead</h2>
+<p>The stock HEVO uses a Bowden extruder. The direct-drive heads I found online all hung the motor off one side, so they twisted the carriage. My design puts the stepper on the opposite side from everything else so the head is balanced. The motor shaft passes straight through the block.</p>
+<ul>
+<li>Runs on 8 mm steel or 10 mm carbon fiber rods</li>
+<li>Wedges hold the eccentric bushings, with adjustable interference to remove play</li>
+<li>Integrated part cooling and belt tensioning</li>
+</ul>
+<p>I also added a custom electronics enclosure, cable chains and a filament sensor.</p>
+<div class="gallery"><figure><a href="../media/hypercube-evolution/printhead-1.jpg" class="lb"><img src="../media/hypercube-evolution/printhead-1_t.jpg" alt="Balanced printhead on carbon rods" loading="lazy"></a><figcaption>Balanced printhead on carbon rods</figcaption></figure><figure><a href="../media/hypercube-evolution/printhead-3.jpg" class="lb"><img src="../media/hypercube-evolution/printhead-3_t.jpg" alt="Motor opposite the hotend" loading="lazy"></a><figcaption>Motor opposite the hotend</figcaption></figure><figure><a href="../media/hypercube-evolution/printhead-7.jpg" class="lb"><img src="../media/hypercube-evolution/printhead-7_t.jpg" alt="Section through the carriage" loading="lazy"></a><figcaption>Section through the carriage</figcaption></figure><figure><a href="../media/hypercube-evolution/printhead-5.jpg" class="lb"><img src="../media/hypercube-evolution/printhead-5_t.jpg" alt="Belt clamps on the carriage" loading="lazy"></a><figcaption>Belt clamps on the carriage</figcaption></figure><figure><a href="../media/hypercube-evolution/printhead-9.jpg" class="lb"><img src="../media/hypercube-evolution/printhead-9_t.jpg" alt="Top view" loading="lazy"></a><figcaption>Top view</figcaption></figure><figure><a href="../media/hypercube-evolution/printhead-real.jpg" class="lb"><img src="../media/hypercube-evolution/printhead-real_t.jpg" alt="Printed and assembled" loading="lazy"></a><figcaption>Printed and assembled</figcaption></figure></div>
+<nav class="pager"><a href="beast-robotics.html">← BEAST Robotics: Suction End Effector</a><a href="early-work.html">Early Work: Maker Faire, Clearwater, Rockets →</a></nav>
+</article>
+</main>
+<footer class="foot"><div class="wrap"><span>© 2026 Ben Vrakas</span>
+<span><a href="https://github.com/benvrakas">GitHub</a> · <a href="https://www.printables.com/@VLabs_256532">Printables</a> · <a href="https://www.thingiverse.com/benvrakas/designs">Thingiverse</a></span></div></footer>
+<div id="lightbox" hidden><img alt=""><button aria-label="Close">×</button></div>
+<script src="../site.js" defer></script>
+</body>
+</html>

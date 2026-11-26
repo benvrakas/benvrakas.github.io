@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UWRF Lunabotics Rover · Ben Vrakas</title>
+<meta name="description" content="A NASA moon-mining rover that my roommate and I started at UW–River Falls. I did the mechanical design: closed-loop hub-motor wheels, a deployable wheelbase and a bucket-chain excavator.">
+<meta property="og:title" content="UWRF Lunabotics Rover · Ben Vrakas">
+<meta property="og:description" content="A NASA moon-mining rover that my roommate and I started at UW–River Falls. I did the mechanical design: closed-loop hub-motor wheels, a deployable wheelbase and a bucket-chain excavator.">
+<meta property="og:image" content="https://benvrakas.github.io/media/lunabotics/bench.jpg">
+<link rel="icon" href="../favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="top"><div class="wrap"><a class="brand" href="../index.html"><span class="mark">BV</span>Ben Vrakas</a><nav><a href="../index.html#work">Work</a><a href="../index.html#experience">Experience</a><a href="../index.html#about">About</a><a href="https://github.com/benvrakas">GitHub</a></nav></div></header>
+<main>
+<article class="project wrap narrow">
+<a class="back" href="../index.html#work">← All work</a>
+<p class="eyebrow">2020 – 2021</p>
+<h1>UWRF Lunabotics Rover</h1>
+<p class="lede">A NASA moon-mining rover that my roommate and I started at UW–River Falls. I did the mechanical design: closed-loop hub-motor wheels, a deployable wheelbase and a bucket-chain excavator.</p>
+<ul class="chips"><li>Autodesk Inventor</li><li>BLDC / ODrive</li><li>Gearbox design</li><li>Mechanisms</li><li>Team lead</li></ul>
+
+</article>
+<div class="wrap"><div class="phero"><img src="../media/lunabotics/bench.jpg" alt="UWRF Lunabotics Rover"></div></div>
+<article class="project wrap narrow prose">
+<p>Lunabotics is NASA's competition for lunar mining robots. My roommate and I started a team at the University of Wisconsin–River Falls. COVID cancelled the in-person event, but we presented the robot to the judges over video. I led the mechanical design.</p>
+<div class="gallery"><figure><a href="../media/lunabotics/render-rov.jpg" class="lb"><img src="../media/lunabotics/render-rov_t.jpg" alt="Front view in Inventor: excavator between the wheel modules" loading="lazy"></a><figcaption>Front view in Inventor: excavator between the wheel modules</figcaption></figure><figure><a href="../media/lunabotics/render-rov-2.jpg" class="lb"><img src="../media/lunabotics/render-rov-2_t.jpg" alt="Full rover in Inventor" loading="lazy"></a><figcaption>Full rover in Inventor</figcaption></figure><figure><a href="../media/lunabotics/assembled.jpg" class="lb"><img src="../media/lunabotics/assembled_t.jpg" alt="Built rover" loading="lazy"></a><figcaption>Built rover</figcaption></figure></div>
+
+<h2>Drive</h2>
+<p>Each wheel is driven by a <strong>900 W brushless gimbal motor</strong> with a <strong>600 PPR rotary encoder</strong>, both wired to an <strong>ODrive</strong> for closed-loop control. My first wheel used a double leaf spring between rim and hub, but it (and its single-extrusion mount) didn't hold up. I switched to rigid wheels with a hexagonal pattern in place of spokes.</p>
+<p>To get around the size limits, I designed a <strong>wheel deployment system</strong> that gives the rover a wider wheelbase than competitors once it's on the field. A servo on each wheel releases a four-bar linkage, which a 40 lb constant-force gas spring then drives out.</p>
+<div class="gallery"><figure><a href="../media/lunabotics/render-suspension.jpg" class="lb"><img src="../media/lunabotics/render-suspension_t.jpg" alt="Wheel module with hex-pattern wheel" loading="lazy"></a><figcaption>Wheel module with hex-pattern wheel</figcaption></figure><figure><a href="../media/lunabotics/frame-wheels.jpg" class="lb"><img src="../media/lunabotics/frame-wheels_t.jpg" alt="Frame with all four wheel modules" loading="lazy"></a><figcaption>Frame with all four wheel modules</figcaption></figure><figure><a href="../media/lunabotics/drive-test.jpg" class="lb"><img src="../media/lunabotics/drive-test_t.jpg" alt="First drive test" loading="lazy"></a><figcaption>First drive test</figcaption></figure></div>
+
+<h2>Excavator</h2>
+<p>The digger is a <strong>bucket-chain excavator</strong> driven by a <strong>4 kW BLDC motor</strong> through reduction belts. The whole assembly drives itself up and down a pivot gear on two lead screws to set the dig angle. I designed a scalable <strong>planetary gearbox</strong> for the T8 lead screws. It worked on the first try, and I reused it elsewhere on the robot. The printed buckets have metal cutting edges and attach to roller chain at regular intervals.</p>
+<div class="gallery g2"><figure><a href="../media/lunabotics/render-digger.jpg" class="lb"><img src="../media/lunabotics/render-digger_t.jpg" alt="Excavator assembly" loading="lazy"></a><figcaption>Excavator assembly</figcaption></figure><figure><a href="../media/lunabotics/gearbox.jpg" class="lb"><img src="../media/lunabotics/gearbox_t.jpg" alt="Planetary gearbox prototype" loading="lazy"></a><figcaption>Planetary gearbox prototype</figcaption></figure><figure><a href="../media/lunabotics/digger-chain.jpg" class="lb"><img src="../media/lunabotics/digger-chain_t.jpg" alt="Bucket chain installed" loading="lazy"></a><figcaption>Bucket chain installed</figcaption></figure><figure><a href="../media/lunabotics/bench.jpg" class="lb"><img src="../media/lunabotics/bench_t.jpg" alt="Integration on the bench" loading="lazy"></a><figcaption>Integration on the bench</figcaption></figure></div>
+
+<figure class="yt"><button class="yt-lite" data-id="8W6bg1KmnDA" aria-label="Play video: Rover video" style="background-image:url(https://i.ytimg.com/vi/8W6bg1KmnDA/hqdefault.jpg)"><span></span></button><figcaption>Rover video</figcaption></figure>
+
+<figure class="yt"><button class="yt-lite" data-id="oquR6lneSxE" aria-label="Play video: Rover video" style="background-image:url(https://i.ytimg.com/vi/oquR6lneSxE/hqdefault.jpg)"><span></span></button><figcaption>Rover video</figcaption></figure>
+<nav class="pager"><a href="satisfactory-mods.html">← Satisfactory Mods</a><a href="beast-robotics.html">BEAST Robotics: Suction End Effector →</a></nav>
+</article>
+</main>
+<footer class="foot"><div class="wrap"><span>© 2026 Ben Vrakas</span>
+<span><a href="https://github.com/benvrakas">GitHub</a> · <a href="https://www.printables.com/@VLabs_256532">Printables</a> · <a href="https://www.thingiverse.com/benvrakas/designs">Thingiverse</a></span></div></footer>
+<div id="lightbox" hidden><img alt=""><button aria-label="Close">×</button></div>
+<script src="../site.js" defer></script>
+</body>
+</html>
