@@ -113,7 +113,7 @@ def md(text):
     return markdown.markdown(text, extensions=['tables', 'attr_list', 'md_in_html', 'sane_lists', 'toc'])
 
 
-def page(title, body, prefix='', desc='', og_image='', active=''):
+def page(title, body, prefix='', desc='', og_image='', active='', page_path=''):
     nav = ''.join(f'<a href="{prefix + u}">{n}</a>' for n, u in NAV)
     nav += '<a class="gh" href="https://github.com/benvrakas">GitHub ↗</a>'
     og = f'<meta property="og:image" content="{SITE["url"]}/{og_image}">' if og_image else ''
@@ -125,6 +125,10 @@ def page(title, body, prefix='', desc='', og_image='', active=''):
 <title>{html.escape(title)}</title>
 <meta name="description" content="{html.escape(desc)}">
 <meta name="theme-color" content="#0e1013">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ben Vrakas">
+<meta property="og:url" content="{SITE["url"]}/{html.escape(page_path)}">
+<meta name="twitter:card" content="summary_large_image">
 <meta property="og:title" content="{html.escape(title)}">
 <meta property="og:description" content="{html.escape(desc)}">
 {og}
@@ -213,7 +217,7 @@ def build_project(p, projects):
 </article>
 </div>'''
     og = media(slug, p['hero']) if p.get('hero') else ''
-    return page(f'{p["title"]} · Ben Vrakas', body, pre, p.get('summary', ''), og, 'proj')
+    return page(f'{p["title"]} · Ben Vrakas', body, pre, p.get('summary', ''), og, 'proj', f'projects/{slug}.html')
 
 
 def card(p):
@@ -257,7 +261,7 @@ def build_home(projects):
 <section id="experience" class="wrap narrow prose"><h2 class="sh">Experience</h2>{md(sec.get("experience", ""))}</section>
 <section id="about" class="wrap narrow prose"><h2 class="sh">About</h2>{md(sec.get("about", ""))}</section>
 <section id="contact" class="wrap narrow prose"><h2 class="sh">Contact & elsewhere</h2>{md(sec.get("contact", ""))}</section>'''
-    return page('Ben Vrakas · Mechanical design, electronics & software', out, '', meta.get('intro', ''), hero_img, 'home')
+    return page('Ben Vrakas · Mechanical design, electronics & software', out, '', meta.get('intro', ''), hero_img, 'home', '')
 
 
 def build_resume():
@@ -271,7 +275,7 @@ def build_resume():
 </div>'''
     tools = (f'<div class="rtools wrap"><a class="btn" href="{RESUME_PDF}">Download PDF ↓</a>'
              f'<a class="btn" href="index.html#work">See the projects →</a></div>')
-    out = page('Resume · Ben Vrakas', tools + sheet, '', 'Resume of Ben Vrakas', '', 'resume')
+    out = page('Resume · Ben Vrakas', tools + sheet, '', 'Resume of Ben Vrakas', 'media/carbon-3d-pc/2024-outdoor.jpg', 'resume', 'resume.html')
     out = out.replace('<link rel="stylesheet" href="style.css">',
                       '<link rel="stylesheet" href="style.css">\n<link rel="stylesheet" href="resume.css">')
     open(os.path.join(OUT, 'resume.html'), 'w', encoding='utf-8').write(out)
