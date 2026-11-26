@@ -14,7 +14,8 @@ I designed the first version after a house fire in my junior year of high school
 
 Design rules from the start:
 
-- **Fully parametric.** Dimensions are driven by Excel spreadsheets inside Autodesk Inventor, so the frame resizes around different hardware.
+- **Fully parametric.** Dimensions are driven by Excel spreadsheets inside Autodesk Inventor, through a skeleton dimensions part in each subsystem (frame, basement, compute, cooling, cable ducts), so the frame resizes around different hardware.
+- **Reusable features.** Custom Inventor iFeatures for the tube clamp, duct bolts and loom mounts put the same geometry into every module.
 - **Buildable with basic hand tools.** Carbon fiber tubes are cut to length, and printed joints and modules clamp onto them.
 - **Modular.** Every component (motherboard tray, GPU mount, radiators, reservoir, PSU compartment, I/O) is its own clamp-on module.
 
@@ -63,7 +64,7 @@ render-v1 | Inventor render of the layout
 
 ## Black generation (2020–2023)
 
-Rebuilt in black with a motherboard duct "spine", a bottom compartment for PSU wiring and drives, and a printed cable-duct network that routes power and data where it's needed. I also made a kit of parts that snaps over split-loom covering for clean cable runs.
+Rebuilt in black around a motherboard tray that clamps to the tubes, a bottom compartment (the "basement") for the PSU and drives, sized parametrically for 140–180 mm PSUs, and a printed cable-duct network behind the board. A second kit of guides, T-junctions and end caps manages split loom for the remaining runs.
 
 :::gallery
 tubeio-2020-build | ROG board and hard-line loop
@@ -76,15 +77,15 @@ tubeio-2020-build | ROG board and hard-line loop
 
 ### Back side: cable management
 
-All the wiring runs behind the motherboard plate. Printed ducts bolt to the duct spine, cable combs and comb inserts hold sleeved cables in rows, and a later set of clips snaps over split loom to carry the rest of the runs to the PSU compartment.
+All the wiring runs behind the motherboard tray. The cable ducts are generated in sizes for 8 to 24 wires, with a comb for each run (CPU, GPU and motherboard power) that holds the sleeved cables in rows, plus external and SATA combs. About two months later I added a split-loom kit: top and bottom motherboard guides, 3-way and offshoot T-junctions, bushings, end caps and radiator loom holders.
 
 :::gallery
-duct-network | Printed ducts going on behind the motherboard plate
+duct-network | Printed cable ducts going on behind the motherboard tray
 duct-combs | Duct plate with comb guides fitted
 comb-routing | Sleeved cables held in rows by the combs
 back-wired | Back side wired up
-back-duct-spine | Duct spine and plates on a bare frame
-loom-clips | Printed clips that snap over split loom
+back-duct-spine | Motherboard tray and cable ducts on a bare frame
+loom-clips | Split-loom guides and fittings
 loom-routing | Loom runs clipped to the frame
 back-finished | Finished back side
 :::
@@ -104,7 +105,7 @@ desk-setup | Delivered and in use
 
 ## My current build: black and white, with enclosure (2024–2025)
 
-The latest generation has a two-tone printed kit, a full custom loop and a much cleaner part count. People kept saying they'd avoid an open case because of dust, so this one adds an **optional enclosure**: rounded printed edge frames that attach to the tubes with magnets and hold tempered-glass side panels and a wave-pattern front panel. It runs a Ryzen 7 5800X3D and an RTX 3080 Ti.
+The latest generation has a two-tone printed kit, a full custom loop and a much cleaner part count. People kept saying they'd avoid an open case because of dust, so this one adds an **optional enclosure**: printed corners and edges that fit over the tube frame, tempered-glass side panels held on with magnetic strips, a wave-pattern front intake panel, a top panel cut out for the I/O module and a ducted exhaust fan. It runs a Ryzen 7 5800X3D and an RTX 3080 Ti.
 
 :::gallery
 2024-assembly | Assembly

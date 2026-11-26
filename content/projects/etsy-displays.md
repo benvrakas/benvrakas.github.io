@@ -18,6 +18,7 @@ The whole product loop, end to end: design in CAD, batch-print on my [six-printe
 - Wall-mountable or freestanding on a round base
 - A stand and accessory kit for posing the doll inside
 - Trim colors to match each character, plus all-black and two-tone shelf versions
+- Parametric: the case comes in two sizes plus a mini, a bridge joins two cases side by side, and the heart-shaped clips and hanger bars are generated in 18 sizes to fit different dolls. A printed jig positions each clear window.
 
 :::gallery
 lineup | Five-color lineup

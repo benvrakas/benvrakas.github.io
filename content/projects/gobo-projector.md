@@ -15,9 +15,9 @@ Gobo projectors throw a patterned image, like a logo or texture, onto walls and 
 ## System
 
 - **Light engine:** a 1000 W LED on a liquid cold plate, cooled by a pump, reservoir and fans, behind a large lens and the gobo/lens assembly.
-- **Power:** a Mean Well **UHP-1500-48** supply driven either by analog current control or digitally over **CAN/PMBus**, with slew-limited current setpoints.
+- **Power:** a Mean Well **UHP-1500-48** supply driven either by analog current control or digitally over **CAN/PMBus**, with slew-limited current setpoints. A separate Mean Well LRS-350-24 supplies 24 V.
 - **Controller:** an Adafruit **Feather M4 CAN (SAMD51)** on my own **4-layer KiCad board**, with isolated interfaces, fan and pump drivers, tachometer and thermistor inputs, and an OLED, rotary encoder and power button for the UI.
-- **Frame:** houses the PSU, cooling loop and electronics, with the head mounted on top.
+- **Layout:** the fixture splits into the **emitter** (the head: LED, waterblock, optics and blower) and the **power pack** (a 20×20 extrusion frame with cut panels holding the supplies, radiator, pump and reservoir, electronics and UI panel), joined by a coolant **umbilical**.
 
 :::gallery
 led-cold-plate | LED on the liquid cold plate
@@ -60,6 +60,8 @@ blower | Head blower
 :::
 
 ## Optics and housing {: theme=lab }
+
+Before the 1000 W build I took a **100 W fixed-lens light engine** through three versions. I then built a modular test bench on 20×20 extrusion with swappable lens carriers (100 mm plano-convex, 78 mm high-NA plano-convex, 77 mm high-NA converging meniscus and a 90 mm Fresnel) to compare condenser options, and modeled a parabolic collimator with a mold for casting it.
 
 :::gallery
 cad-housing-1 | Lens housing in CAD

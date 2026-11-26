@@ -8,7 +8,7 @@ summary: The printers behind everything else, from a PrintrBot at 14 to a HyperC
 hero: rebuild-2019
 links: Printhead files (Thingiverse) | https://www.thingiverse.com/thing:5377398 ; RailCore upgrades (Printables) | https://www.printables.com/model/591660-railcore-upgrades-fan-shroud-tension-blocks-hotend
 ---
-My first printer was a **PrintrBot Simple** at 14, and I designed most of my early upgrades for it. Since then I've built and reworked a series of machines: a **HyperCube Evolution**, a **RailCore 300 ZL** (an all-metal CoreXY with a Duet, three-point bed leveling and my own upgrades: accelerometer, filament sensor, fan shroud, tension blocks and hotend mount), and the [V-Labs Ender 3](v-labs-ender-3.html) farm.
+My first printer was a **PrintrBot Simple** at 14, and I designed most of my early upgrades for it. Since then I've built and reworked a series of machines: a **HyperCube Evolution**, a **RailCore 300 ZL** (an all-metal CoreXY with a Duet, three-point bed leveling and my own upgrades: a compliant Z bearing mount, Z motor stabilizers, an improved V6 hotend mount and part-cooling shroud, a better belt retainer, cable-chain mounts, a filament sensor and an accelerometer mount), and the [V-Labs Ender 3](v-labs-ender-3.html) farm.
 
 ## HyperCube Evolution
 
@@ -25,7 +25,8 @@ rebuild-2019 | Rebuild
 The stock HEVO uses a Bowden extruder. The direct-drive heads I found online all hung the motor off one side, so they twisted the carriage. My design puts the stepper on the opposite side from everything else so the head is balanced. The motor shaft passes straight through the block.
 
 - Runs on 8 mm steel or 10 mm carbon fiber rods
-- Wedges hold the eccentric bushings, with adjustable interference to remove play
+- UHMW bushings in printed adapters made with 0, 0.1, 0.2 or 0.3 mm of offset, so play can be tuned out
+- BMG extruder with an E3D V6 or Rapido hotend, plus a BLTouch mount
 - Integrated part cooling and belt tensioning
 
 I also added a custom electronics enclosure, cable chains and a filament sensor.

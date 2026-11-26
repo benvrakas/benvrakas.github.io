@@ -10,17 +10,17 @@ links: Printables (V-Labs) | https://www.printables.com/@VLabs_256532 ; Thingive
 ---
 ## Laptop stand (2022)
 
-A wood laptop stand with printed brackets and magnetic hinges.
+A wood laptop stand on printed hinges. Each hinge turns on 10 mm bearings and an axle, with 10 × 2 mm magnets and heat-set inserts for the hardware.
 
 :::gallery
-laptop-render-2 | Hinge brackets in Inventor
+laptop-render-2 | Top and bottom hinges in Inventor
 laptop-real | Finished stand in use
 laptop-real-2 | Finished stand
 :::
 
 ## Guided knife sharpener (2021)
 
-A guided sharpener that keeps the stone at a consistent angle to the blade. Published on Thingiverse and Printables.
+A guided sharpener that keeps the stone at a consistent angle to the blade. The stone holder rides an 8 mm guide rod through a swivel, above an aluminum-extrusion base that clamps the knife. Published on Thingiverse and Printables.
 
 :::gallery
 knife-render | Design
@@ -41,27 +41,27 @@ hyperx-review | A user's 5-star review: theirs was the only replacement of the t
 
 ## Vertical GPU mount and modular storage (2024) {: theme=print }
 
-A vertical GPU mount that fits over any ATX motherboard, and a parametric system of magnetic stacking bins printed on the Ender farm.
+A vertical GPU mount that fits over any ATX motherboard, and parametric magnetic prism containers (3-, 4-, 6- and 8-sided, in several heights) printed in vase mode on the Ender farm.
 
 :::gallery
 gpu-mount | Vertical GPU mount
 gpu-mount-2 | Mounted over the board
-magnetic-bins | Parametric magnetic storage bins
+magnetic-bins | Magnetic prism containers
 magnetic-bins-2 | Stacked
 :::
 
 ## Keder rail attachments for campers (2026) {: theme=print }
 
-A set of printed hooks, pegs and stops that attach to the keder (awning) rail on campers, plus a matching tool. Designed as a product line and not yet listed for sale.
+A set of printed hooks, posts and tabs that lock into the keder (awning) rail on campers on a common rail base, plus a matching keder rail wrench. Designed as a product line and not yet listed for sale.
 
 :::gallery
 keder-set | The full set
 keder-hook | Hook
-keder-hook-2 | Offset hook
-keder-peg | Peg
+keder-hook-2 | Hook, other side
+keder-peg | Post
 keder-stop | Stop
-keder-wrench | Tool
-keder-parts | Hooks and rail inserts
+keder-wrench | Keder rail wrench
+keder-parts | Hook, post and rail base
 :::
 
 ## Fireplace surround and mantel (2021)
@@ -81,7 +81,7 @@ fireplace-2 | Finished
 
 ## CAD timelapses, a printed hinge, cable chains and a camera gimbal
 
-Parametric cable chains in several sizes, used on my printers and [published on Printables](https://www.printables.com/model/605511-cable-chain-20x20x20mm), plus a carbon-rod camera gimbal design.
+Parametric cable chains in 10 × 10, 15 × 15, 20 × 20 and 20 × 60 mm sizes, plus a link that carries PTFE tube, used on my printers and [published on Printables](https://www.printables.com/model/605511-cable-chain-20x20x20mm), plus a carbon-tube camera gimbal on BGM5208 brushless gimbal motors.
 
 :::gallery
 cable-chain | Printed cable chain

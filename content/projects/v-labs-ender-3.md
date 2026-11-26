@@ -40,6 +40,8 @@ A small Python web app (FastAPI) for running the farm:
 - **Push** macros or files to many printers at once
 - **Firmware updates** from a versioned package. It checks the printer is idle and the package matches the board, uploads with CRC checks and retries, flashes the main and Wi-Fi firmware, waits for the reboot and confirms the new versions. Per-printer config is never overwritten.
 
+The rack itself is a steel Husky shelf fitted with printed mounts: printer base mounts and top stabilizers, spool holders, PTFE endpoints, filament-sensor mounts, a power-strip mount and side baffles that enclose each shelf.
+
 :::gallery
 farm-rack | The farm rack
 orange-build | A converted machine with the full cable-chain kit

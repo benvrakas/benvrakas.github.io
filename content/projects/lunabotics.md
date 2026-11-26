@@ -7,7 +7,7 @@ tags: Autodesk Inventor, BLDC / ODrive, Gearbox design, Mechanisms, Team founder
 summary: A NASA moon-mining rover that my roommate and I started at UW–River Falls. I did the mechanical design: closed-loop hub-motor wheels, a deployable wheelbase and a bucket-chain excavator.
 hero: bench
 ---
-Lunabotics is NASA's competition for lunar mining robots. My roommate and I started a team at the University of Wisconsin–River Falls. COVID cancelled the in-person event, but we presented the robot to the judges over video. I led the mechanical design. *(I'm now in the early stages of a new Lunabotics team for 2027.)*
+Lunabotics is NASA's competition for lunar mining robots. My roommate and I started a team at the University of Wisconsin–River Falls. COVID cancelled the in-person event, but we presented the robot to the judges over video. I led the mechanical design. *(I'm now in the early stages of a new Lunabotics team for 2027; the new design starts from a planetary gearbox inside each wheel hub.)*
 
 :::youtube oquR6lneSxE | Lunabotics 1
 :::youtube 8W6bg1KmnDA | Lunabotics 3
@@ -32,7 +32,7 @@ drive-test | First drive test
 
 ## Excavator
 
-The digger is a **bucket-chain excavator** driven by a **4 kW BLDC motor** through reduction belts. The whole assembly drives itself up and down a pivot gear on two lead screws to set the dig angle. I designed a scalable **two-stage planetary gearbox** for the T8 lead screws. It worked on the first try, and I reused it elsewhere on the robot. The printed buckets have metal cutting edges and attach to roller chain at regular intervals.
+The digger is a **bucket-chain excavator** driven by a **4 kW BLDC motor** through reduction belts. The whole assembly slides on 700 mm MGN12 linear rails and drives itself up and down a pivot gear on two lead screws to set the dig angle. I designed a scalable **two-stage planetary gearbox** for the T8 lead screws. It worked on the first try, and I reused it elsewhere on the robot. The printed buckets have metal cutting edges and attach to roller chain at regular intervals. Spoil goes into a dump bin on a slide with its own sprocket drive, and the electronics plate carries the ODrives, a Jetson NX and the LiPo pack.
 
 :::gallery
 render-digger | Excavator assembly
