@@ -9,10 +9,10 @@ hero: makerfaire-2015
 ---
 ## Starting young
 
-Woodshop, clamps and cardboard robots. Most of what came later started here.
+Woodshop, clamps and K'NEX builds. Most of what came later started here.
 
 :::gallery
-young-robot | An early cardboard-and-Lego robot
+young-robot | An early K'NEX system that plays a slideshow
 young-router | At the router table
 young-planer | Planing stock
 young-clamp | Glue-up
@@ -54,6 +54,7 @@ round-case | Another custom case shown at Maker Faire
 
 As co-captain, I led a regional-champion team in the Rockets for Schools program. We won first- and second-place awards at the Midwest launch competitions, designing and building payloads and fuselages for high-power rockets up to six feet tall.
 
+- **2013 (1st place):** a cloud-seeding payload.
 - **2014 (3rd place):** a payload of custom PCBs and software measuring air pollution (CO₂, NOx, MOx) through the flight.
 - **2015 (2nd place):** a payload studying "dark lightning", the radiation bursts high-altitude electrical discharges can produce, with custom circuitry calibrated to industry-standard methods.
 
