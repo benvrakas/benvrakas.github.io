@@ -92,7 +92,6 @@ desk-setup | Delivered and in use
 The latest generation has a two-tone printed kit, a full custom loop and a much cleaner part count. People kept saying they'd avoid an open case because of dust, so this one adds an **optional enclosure**: rounded printed edge frames that attach to the tubes with magnets and hold tempered-glass side panels and a wave-pattern front panel. It runs a Ryzen 7 5800X3D and an RTX 3080 Ti.
 
 :::gallery
-2024-printed-parts | The full printed kit for one build
 2024-assembly | Assembly
 2024-outdoor-2 | Finished: open frame
 2024-detail-io | Top I/O module and clamps
@@ -101,6 +100,7 @@ The latest generation has a two-tone printed kit, a full custom loop and a much 
 :::
 
 :::gallery
+2024-printed-parts | Printed parts for the enclosure
 2024-panel-off | Enclosure side panel: glass in a printed magnetic frame
 2024-enclosure | Enclosed, with the wave front panel
 2025-desk | Enclosed build in use
