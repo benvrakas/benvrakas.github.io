@@ -35,6 +35,7 @@ The plastic buckle on HyperX Cloud 2 and Cloud Alpha headsets often breaks. My r
 
 :::gallery
 hyperx-clasp | Printed replacement installed
+hyperx-install | Fitting a replacement
 hyperx-review | A user's 5-star review: theirs was the only replacement of the three they tried that printed cleanly and fit
 :::
 

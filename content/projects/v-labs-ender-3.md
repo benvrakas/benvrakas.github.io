@@ -40,4 +40,13 @@ A small Python web app (FastAPI) for running the farm:
 - **Push** macros or files to many printers at once
 - **Firmware updates** from a versioned package. It checks the printer is idle and the package matches the board, uploads with CRC checks and retries, flashes the main and Wi-Fi firmware, waits for the reboot and confirms the new versions. Per-printer config is never overwritten.
 
+:::gallery
+farm-rack | The farm rack
+orange-build | A converted machine with the full cable-chain kit
+orange-build-top | Top view
+board-enclosure | Printed board enclosure
+:::
+
+:::video farm-running | The farm running
+
 :::youtube 5zqDwToLOdk | Printing at speed

@@ -40,13 +40,23 @@ PlatformIO / Arduino C++ structured like a small product rather than a sketch:
 
 ## Controller board
 
+The controller went from a hand-wired perfboard prototype to a custom PCB, and was then revised into a 4-layer board.
+
 :::gallery
+perfboard-proto | Perfboard prototype: Feather, level shifters, connectors
+perfboard-wiring | Hand-wired prototype, underside
 schematic-v1 | First schematic
 pcb-layout-v1 | First layout
 pcb-3d-v1 | First board, 3D view
-controller-proto | Prototype controller during bring-up
+controller-proto | First PCB during bring-up
+:::
+
+:::gallery
 schematic-v2 | Revised schematic
 pcb-3d-v2 | Revised 4-layer board with the Feather M4 CAN
+controller-installed | Installed in the frame with the OLED and encoder UI
+controller-running | Running in the fixture
+blower | Head blower
 :::
 
 ## Optics and housing
