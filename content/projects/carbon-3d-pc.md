@@ -74,6 +74,21 @@ tubeio-2020-build | ROG board and hard-line loop
 2023-cable-routing | Sleeved cable routing through printed clamps
 :::
 
+### Back side: cable management
+
+All the wiring runs behind the motherboard plate. Printed ducts bolt to the duct spine, cable combs and comb inserts hold sleeved cables in rows, and a later set of clips snaps over split loom to carry the rest of the runs to the PSU compartment.
+
+:::gallery
+duct-network | Printed ducts going on behind the motherboard plate
+duct-combs | Duct plate with comb guides fitted
+comb-routing | Sleeved cables held in rows by the combs
+back-wired | Back side wired up
+back-duct-spine | Duct spine and plates on a bare frame
+loom-clips | Printed clips that snap over split loom
+loom-routing | Loom runs clipped to the frame
+back-finished | Finished back side
+:::
+
 :::video broll-2023 | Black build
 
 ## Commissioned build (2023)
