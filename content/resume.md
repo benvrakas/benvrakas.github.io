@@ -19,7 +19,7 @@ Hands-on design engineer (10+ years in Autodesk Inventor, CSWA/CSWP with perfect
 - Designed and produced 3D-printed products on a **6-printer RepRapFirmware farm** with a self-written Python fleet manager: **141 Etsy sales, 5.0★**. Also published C++ game mods (~19,500 downloads).
 
 ### Contract Design Engineer · Micronics LLC · Middleton, WI <span>Jul 2023 – Jun 2024</span>
-- One of three engineers at a hardware startup, acquired by **Formlabs**. Designed and built product prototypes from sheet metal, FDM and SLS parts and off-the-shelf components.
+- One of three engineers at a hardware startup, acquired by **Formlabs**. Did solid-body and sheet-metal CAD for the mechanics of the company's **Micron V4.5** printer, and built prototypes from sheet metal, FDM and SLS parts.
 - Built an **automated part-extraction system** for enclosed FDM printers (stepper-driven linear axis with its own controller) to enable unattended back-to-back printing.
 - Worked on systems automation and PLCs, G-code scripting, FEA and modal analysis, and sourced and tested hardware from global suppliers on rapid design-test cycles.
 

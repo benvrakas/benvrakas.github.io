@@ -15,7 +15,7 @@ Studying mechanical design while building larger independent projects: a [1000 W
 ### Micronics LLC · Middleton, WI
 *Independent contractor · Jul 2023 – Jun 2024*
 
-One of three people at a hardware startup that was later acquired by Formlabs. I designed and built product prototypes from sheet metal, FDM and SLS parts and off-the-shelf components, sourced and tested hardware from global suppliers, and worked on systems automation and PLCs, G-code scripting, FEA and modal analysis, all on a rapid design-test cycle. One project I can show is an [automated part-extraction system for FDM printers](projects/part-extraction.html).
+One of three people at a hardware startup that was later acquired by Formlabs. I did solid-body and sheet-metal CAD for the mechanics of the company's Micron V4.5 printer, designed and built product prototypes from sheet metal, FDM and SLS parts and off-the-shelf components, sourced and tested hardware from global suppliers, and worked on systems automation and PLCs, G-code scripting, FEA and modal analysis, all on a rapid design-test cycle. One project I can show is an [automated part-extraction system for FDM printers](projects/part-extraction.html).
 
 ### Space Science Institute · Student intern
 *2017 – 2019*

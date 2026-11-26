@@ -9,7 +9,7 @@ hero: system
 ---
 A printer farm loses most of its unattended time waiting for someone to remove the finished part. As one of three engineers at Micronics, a hardware startup later acquired by Formlabs, I built a part-extraction system for enclosed FDM printers: a stepper-driven linear axis with its own controller that reaches into the build chamber and clears the plate after each print.
 
-*Other Micronics work is under NDA. This is the project I'm able to show.*
+*I also did solid-body and sheet-metal CAD for the mechanics of the company's Micron V4.5 printer. That work is under NDA, so this is the project I can show in detail.*
 
 :::video cycle | Extraction cycle
 
