@@ -4,7 +4,7 @@ title: Mechanical Design · Electronics · Embedded & Software
 contact: Madison, WI | 414-551-8244 | [benvrakas@gmail.com](mailto:benvrakas@gmail.com) | [benvrakas.github.io](https://benvrakas.github.io) | [github.com/benvrakas](https://github.com/benvrakas)
 ---
 ## Summary
-Hands-on design engineer (10+ years in Autodesk Inventor, CSWA/CSWP with perfect scores) who takes products from parametric CAD through PCBs, firmware and fabrication, from startup prototypes (acquired by Formlabs) to a 1000 W liquid-cooled LED projector and C++ software with ~19,500 downloads.
+Hands-on design engineer (10+ years in Autodesk Inventor, CSWA/CSWP with perfect scores) who takes products from parametric CAD through PCBs, firmware and fabrication, from startup prototypes (acquired by Formlabs) to a 1000 W liquid-cooled LED projector with a custom 4-layer controller.
 
 ## Skills
 - **CAD & analysis:** Autodesk Inventor (10+ yrs, spreadsheet-driven parametric models), SOLIDWORKS (CSWP), FEA and modal analysis, Blender rendering, DFM for FDM, SLS, sheet metal, CNC and injection molding
@@ -16,8 +16,7 @@ Hands-on design engineer (10+ years in Autodesk Inventor, CSWA/CSWP with perfect
 ### Independent Engineer · V-Labs · Madison, WI <span>Jun 2024 – Present</span>
 - Designing a **1000 W liquid-cooled LED gobo projector**: 4-layer KiCad controller (SAMD51 + CAN/PMBus), safety-latched firmware state machine with per-channel fault monitoring, printed optics housing and frame.
 - Architected **self-configuring modular light panels** (hex/square/triangle) with spring-contact seam bridges, CAN networking and room-scale 3D effects. Mechanical prototypes printed; full spec with decision records.
-- Shipped **13 C++ mods for Satisfactory** (Unreal Engine), with **~19,500 downloads in two months**, including space-time train scheduling and a server networking fix.
-- Designed and produced 3D-printed products on a **6-printer RepRapFirmware farm** with a self-written Python fleet manager: **141 Etsy sales, 5.0★**.
+- Designed and produced 3D-printed products on a **6-printer RepRapFirmware farm** with a self-written Python fleet manager: **141 Etsy sales, 5.0★**. Also published C++ game mods (~19,500 downloads).
 
 ### Contract Design Engineer · Micronics LLC · Middleton, WI <span>Jul 2023 – Jun 2024</span>
 - One of three engineers at a hardware startup, acquired by **Formlabs**. Designed and built product prototypes from sheet metal, FDM and SLS parts and off-the-shelf components.
