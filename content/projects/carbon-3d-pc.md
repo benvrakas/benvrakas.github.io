@@ -9,6 +9,8 @@ hero: 2024-outdoor
 ---
 The project began when someone on AMD's marketing team saw my earlier [Project Clearwater](early-work.html) build and offered to send parts in exchange for marketing photos. AMD featured the result on its Instagram and Twitter, and PC showcase accounts reposted the builds to large audiences: **@extremepc** (3,400+ likes, 2019), **@gamingpcrigs** (2019), and **@hardware.hobbies** and **@swifty.setups** (2020). It has since grown into a chassis *system*: the same parametric Inventor model has produced a series of builds, each refining the last. Every photo here is mine.
 
+I designed the first version after a house fire in my junior year of high school, and have put roughly **500 hours of CAD** into the system since.
+
 Design rules from the start:
 
 - **Fully parametric.** Dimensions are driven by Excel spreadsheets inside Autodesk Inventor, so the frame resizes around different hardware.
@@ -24,6 +26,24 @@ render-tubeio | Render of a later generation
 :::youtube b5MX7NRM8cU | Modular radiator: CAD timelapse
 :::youtube 5-WRpH381ag | PSU module: CAD timelapse
 :::youtube jRUJKN-QJQA | Hinge: CAD timelapse and printing
+
+## Community response
+
+I documented the build on Reddit, where the series has drawn **well over 20,000 upvotes** across r/3Dprinting, r/functionalprint, r/pcmasterrace and r/Amd. The top post reached 3,693 upvotes at 98%. Every thread filled up with requests for files, kits and commissions.
+
+> "Most engineers at my company couldn't make a build like this, myself included." (r/functionalprint)
+
+> "That's one of the cleanest printed pc cases I've seen!" (r/3Dprinting)
+
+| Post | Subreddit | Upvotes |
+|---|---|---|
+| Printed chassis, commissioned build (2023) | r/3Dprinting | 3,693 |
+| Same build (2023) | r/functionalprint | 2,316 |
+| Three-way expanding tube corner joint (2022) | r/functionalprint | 1,843 |
+| Cable-duct network (2022) | r/functionalprint | 1,584 |
+| First build: Ryzen 7 2700X + Vega 64, full hardline (2019) | r/Amd | 1,464 |
+
+**Construction notes:** shell parts are CF-PETG with 5 mm walls, a chassis uses about 250 screws, and the materials come to about $150 per chassis before labor. When commenters raised grounding of the motherboard on carbon tubes, I checked it with a meter.
 
 ## First build (2018–2019)
 
@@ -52,7 +72,7 @@ tubeio-2020-build | ROG board and hard-line loop
 
 ## Commissioned build (2023)
 
-A client commissioned an AIO-cooled build on the chassis with white fans and a tempered-glass option.
+A friend commissioned an AIO-cooled build on the chassis (Ryzen 7 5800X3D, RTX 4070 Ti) with white fans and a tempered-glass option. It's the most-upvoted post of the series.
 
 :::gallery
 front-quarter | Commissioned build

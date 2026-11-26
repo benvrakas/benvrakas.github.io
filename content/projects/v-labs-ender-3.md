@@ -8,7 +8,7 @@ summary: A conversion kit that makes the world's most common budget 3D printer f
 hero: machine-front
 links: Printables | https://www.printables.com/model/591767-v-labs-ender-3 ; Repository | https://github.com/benvrakas/V-Labs-Ender-3
 ---
-The Creality Ender 3 is the most widely produced (and most often thrown away) 3D printer. It's cheap, but you lose a lot of time and filament fighting the first layer. This kit turns it into a reliable, fast, accurate machine running **RepRapFirmware over Wi-Fi** on a Fly E3 board, with no Raspberry Pi or Klipper needed. It's open source, rated 4.5★ on Printables, and runs my **six-printer farm**, which prints products for [Etsy](etsy-displays.html) as well as my own projects.
+The Creality Ender 3 is the most widely produced (and most often thrown away) 3D printer. It's cheap, but you lose a lot of time and filament fighting the first layer. This kit turns it into a reliable, fast, accurate machine running **RepRapFirmware over Wi-Fi** on a Fly E3 board, with no Raspberry Pi or Klipper needed. A complete conversion, including a used base printer from eBay, came to about **$160**. The Fly board runs firmware and the Wi-Fi web interface on one STM32 with an 80-line config and about $35 of electronics, and a converted machine moves at **600 mm/s on X/Y**. It's open source, rated 4.5★ on Printables, and runs my **six-printer farm**, which prints products for [Etsy](etsy-displays.html) as well as my own projects.
 
 :::gallery
 machine | Full machine

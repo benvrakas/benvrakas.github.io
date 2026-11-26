@@ -3,7 +3,7 @@ eyebrow: Mechanical design · Electronics · Software · V-Labs
 tagline: I design things in CAD, then build the boards, firmware and tools that make them work.
 intro: Hands-on engineer in Madison, WI. 10+ years in Autodesk Inventor, CSWA and CSWP certified, with a long run of custom 3D printers, PCs, electric vehicles and lighting. My recent work spans KiCad, embedded firmware and C++.
 skills: Autodesk Inventor, SOLIDWORKS (CSWP), KiCad, Blender, FDM / SLS / sheet metal, RepRapFirmware, ESP32 / SAMD51, C++ / Unreal, Python
-stats: 10+ yrs | Autodesk Inventor ; CSWA + CSWP | perfect scores ; 141 | Etsy sales, 5.0★ ; 6 | printer RRF farm ; AMD | sponsored build
+stats: 10+ yrs | Autodesk Inventor ; 20k+ | Reddit upvotes on the case series ; CSWA + CSWP | perfect scores ; 141 | Etsy sales, 5.0★ ; 6 | printer RRF farm ; AMD | sponsored build
 hero_image: media/carbon-3d-pc/2024-desk_t.jpg
 ---
 <!-- section: experience -->

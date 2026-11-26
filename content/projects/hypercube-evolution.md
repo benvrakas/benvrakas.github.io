@@ -8,7 +8,7 @@ summary: The printers behind everything else, from a PrintrBot at 14 to a HyperC
 hero: rebuild-2019
 links: Printhead files (Thingiverse) | https://www.thingiverse.com/thing:5377398 ; RailCore upgrades (Printables) | https://www.printables.com/model/591660-railcore-upgrades-fan-shroud-tension-blocks-hotend
 ---
-My first printer was a **PrintrBot Simple** at 14, and I designed most of my early upgrades for it. Since then I've built and reworked a series of machines: a **HyperCube Evolution**, a **RailCore** (with my published upgrades: fan shroud, tension blocks and hotend mount), and the [V-Labs Ender 3](v-labs-ender-3.html) farm.
+My first printer was a **PrintrBot Simple** at 14, and I designed most of my early upgrades for it. Since then I've built and reworked a series of machines: a **HyperCube Evolution**, a **RailCore 300 ZL** (an all-metal CoreXY with a Duet, three-point bed leveling and my own upgrades: accelerometer, filament sensor, fan shroud, tension blocks and hotend mount), and the [V-Labs Ender 3](v-labs-ender-3.html) farm.
 
 ## HyperCube Evolution
 

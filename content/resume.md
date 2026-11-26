@@ -32,10 +32,10 @@ Hands-on design engineer (10+ years in Autodesk Inventor, CSWA/CSWP with perfect
 
 ## Selected Projects
 - **UWRF Lunabotics (NASA)**: co-founded the team. Designed ODrive closed-loop hub-motor wheels, a gas-spring wheel deployment linkage, a 4 kW bucket-chain excavator and a printed planetary gearbox.
-- **Electric longboards**: VESC boards with printed enclosures and a self-built 10S3P spot-welded pack (34 mph, 4.4 kW), plus a commissioned 12S4P build.
+- **Electric longboards**: VESC boards with printed enclosures and a self-built 10S3P spot-welded pack (39 mph, 4.4 kW), plus a commissioned 12S4P build.
 - **FIRST Robotics team 2202**: end-effector mechanical lead. Designed a molded suction effector that was the only single-system solution among 300+ teams. **Engineering ingenuity award**, World Championship.
 
 ## Education & Certifications
 - **Madison Area Technical College**, Mechanical Design (in progress, expected 2027–28)
-- **UW–River Falls**, Applied Physics + Mechanical Engineering dual-degree program (2 years completed)
+- **UW–River Falls**, Applied Physics + Mechanical Engineering dual-degree program, 2019–2021
 - **CSWA** and **CSWP** (SOLIDWORKS Associate / Professional), perfect scores · Maker Faire Milwaukee presenter, 2012–16

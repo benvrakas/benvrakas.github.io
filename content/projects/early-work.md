@@ -54,6 +54,9 @@ round-case | Another custom case shown at Maker Faire
 
 As co-captain, I led a regional-champion team in the Rockets for Schools program. We won first- and second-place awards at the Midwest launch competitions, designing and building payloads and fuselages for high-power rockets up to six feet tall.
 
+- **2014 (3rd place):** a payload of custom PCBs and software measuring air pollution (CO₂, NOx, MOx) through the flight.
+- **2015 (2nd place):** a payload studying "dark lightning", the radiation bursts high-altitude electrical discharges can produce, with custom circuitry calibrated to industry-standard methods.
+
 :::gallery
 rockets-award | Competition awards
 rocket | One of our high-power rockets

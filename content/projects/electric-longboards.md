@@ -4,7 +4,7 @@ years: 2016 – 2021
 order: 5
 areas: electrical, mechanical, printing
 tags: VESC, Spot-welded Li-ion packs, BMS, BLDC drive, 3D-printed enclosures, Commissioned build
-summary: Three generations of DIY electric longboards: printed-mount prototypes, a 34 mph personal board with a pack I spot-welded myself, and a commissioned 12S4P build.
+summary: Three generations of DIY electric longboards: printed-mount prototypes, a 39 mph personal board with a pack I spot-welded myself, and a commissioned 12S4P build.
 hero: mk1-side
 links: Motor mount files (Thingiverse) | https://www.thingiverse.com/thing:3100998
 ---
@@ -32,10 +32,11 @@ After the prototypes worked, I built a refined board for myself, including **a 1
 
 | | |
 |---|---|
-| Controller | VESC, dual motors |
-| Battery | 10S3P Li-ion, 9 Ah @ 37 V, my own spot-welded pack with BMS |
+| Controller | Dual Flipsky VESC 4.12, 50 A continuous / 240 A peak |
+| Motors | 2× sensored 6355 190 kV BLDC, about 5 N·m each at launch |
+| Battery | 10S3P Li-ion, 9 Ah / 250 Wh, my own spot-welded pack with BMS |
 | Power | 4,400 W |
-| Top speed | 34 mph |
+| Top speed | 39 mph |
 | Charging | USB-C Power Delivery |
 | Enclosures | Printed PETG: battery, ESC and charging circuit |
 
