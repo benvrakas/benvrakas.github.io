@@ -4,6 +4,7 @@ years: 2026
 order: 10.5
 areas: software
 codeart: UFUNCTION()
+hero: rail-tower
 tags: C++, Unreal Engine, Multiplayer networking, Algorithms, Reverse engineering
 summary: Thirteen C++ mods for the factory game Satisfactory, with about 19,500 downloads in two months, including signal-free train traffic control, demand-driven dispatch and a server networking fix.
 links: ficsit.app | https://ficsit.app/user/benvrakas ; GitHub | https://github.com/benvrakas?tab=repositories
@@ -21,14 +22,34 @@ Plays your own music, YouTube, SoundCloud, Spotify links and internet radio thro
 ### Auto Trains: traffic without signals
 Every self-driving train books the track and switches on its route as **time slots** around the other trains (space-time planning). It then speeds up, slows down, waits or reroutes so that no two trains ever need the same track at the same time. Trains follow each other through roundabouts, take the fastest route given everyone's bookings, and docked trains book their departures ahead from their timetables. Nothing is written into vanilla save data.
 
+:::gallery
+rail-roundabouts | Rail roundabouts on the save I develop and test the train mods on
+:::
+
 ### Smart Trains: demand-driven dispatch
 Platforms get a role (supply, demand or sink) and an item list. Managed trains are shared out across consumer stations in proportion to what each one needs, its consumption rate times its loop's round-trip time, and each train runs one loop: fill at the suppliers, unload at the consumer, repeat.
+
+:::gallery
+smart-platform | Platform settings: role, items, priority and how full a load must be before it's sent
+smart-migration | Migration window: traces each station's belts to fill in roles and items for an existing save (99 stations)
+:::
 
 ### Depot Network Fix: server stability
 On busy servers, the Dimensional Depot's item-count updates overflowed the reliable network buffer and got players kicked. This server-only mod merges the updates and sends them about once a second, holding back while a client is behind.
 
 ### Telescreen (in development)
 Billboard-sized in-game screens that play the same video for every player, in sync, with 3D audio. A separate helper process fetches and decodes the media.
+
+## The test world
+
+I build and test the mods on my own save, so they have to hold up on a large rail network and dense factories.
+
+:::gallery
+rail-jungle | Elevated rail through the jungle
+rail-cliff | Rail over a rock arch
+factory-block | Walled factory block
+factory-floor | Factory floor from above
+:::
 
 ## All mods
 
