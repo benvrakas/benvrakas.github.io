@@ -79,7 +79,7 @@ fireplace-2 | Finished
 
 :::youtube p1gmQI0lnHY | ETF SkillsUSA rubber-band powered car
 
-## CAD timelapses, cable chains and a camera gimbal
+## CAD timelapses, a printed hinge, cable chains and a camera gimbal
 
 Parametric cable chains in several sizes, used on my printers and [published on Printables](https://www.printables.com/model/605511-cable-chain-20x20x20mm), plus a carbon-rod camera gimbal design.
 
@@ -91,3 +91,4 @@ gimbal-2 | Gimbal v2, second view
 
 :::youtube Vb3SRArgR4w | Inventor timelapse
 :::youtube FE2Z9ZVapuU | Subaru Forester phone holder: design timelapse
+:::youtube jRUJKN-QJQA | Printed hinge: CAD timelapse and printing

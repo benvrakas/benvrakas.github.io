@@ -29,7 +29,6 @@ tron-render | 6000 × 6000 render of a lit "Tron" concept
 
 :::youtube b5MX7NRM8cU | Modular radiator: CAD timelapse
 :::youtube 5-WRpH381ag | PSU module: CAD timelapse
-:::youtube jRUJKN-QJQA | Hinge: CAD timelapse and printing
 
 ## Community response
 
