@@ -4,7 +4,7 @@ years: 2019 – 2025
 order: 12
 areas: mechanical, fabrication, printing
 tags: Product design, FDM, Woodworking, Printables, Thingiverse, CAD timelapses
-summary: Everyday engineering: a magnetic-hinge laptop stand, a guided knife sharpener, a replacement headset clasp users rate 5 stars, a fireplace surround, a SkillsUSA car and more.
+summary: Everyday engineering: a magnetic-hinge laptop stand, a guided knife sharpener, a replacement headset clasp users rate 5 stars, camper keder-rail accessories, a fireplace surround, a SkillsUSA car and more.
 hero: laptop-real
 links: Printables (V-Labs) | https://www.printables.com/@VLabs_256532 ; Thingiverse | https://www.thingiverse.com/benvrakas/designs
 ---
@@ -37,6 +37,20 @@ The plastic buckle on HyperX Cloud 2 and Cloud Alpha headsets often breaks. My r
 hyperx-clasp | Printed replacement installed
 hyperx-install | Fitting a replacement
 hyperx-review | A user's 5-star review: theirs was the only replacement of the three they tried that printed cleanly and fit
+:::
+
+## Keder rail attachments for campers (2026)
+
+A set of printed hooks, pegs and stops that attach to the keder (awning) rail on campers, plus a matching tool. Designed as a product line and not yet listed for sale.
+
+:::gallery
+keder-set | The full set
+keder-hook | Hook
+keder-hook-2 | Offset hook
+keder-peg | Peg
+keder-stop | Stop
+keder-wrench | Tool
+keder-parts | Hooks and rail inserts
 :::
 
 ## Fireplace surround and mantel (2021)

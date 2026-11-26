@@ -77,3 +77,12 @@ beam-on | First light
 :::
 
 :::video projection-2 | Gobo projection
+
+## In use
+
+Projecting a text gobo across the side of a multi-story building at night.
+
+:::gallery
+projection-building | Building-scale projection
+projection-building-close | Detail
+:::
