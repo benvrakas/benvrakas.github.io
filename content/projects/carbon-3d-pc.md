@@ -6,6 +6,7 @@ areas: mechanical, printing, fabrication
 tags: Autodesk Inventor, Parametric design, Carbon fiber, FDM, Custom water cooling, Sponsored & commissioned builds
 summary: A parametric PC chassis system of carbon fiber tubes and clamp-on 3D-printed modules. It began as an AMD-sponsored build featured on AMD's social channels and has produced five generations of builds, including a commission.
 hero: 2024-outdoor
+theme: print
 ---
 The project began when someone on AMD's marketing team saw my earlier [Project Clearwater](early-work.html) build and offered to send parts in exchange for marketing photos. AMD featured the result on its Instagram and Twitter, and PC showcase accounts reposted the builds to large audiences: **@extremepc** (3,400+ likes, 2019), **@gamingpcrigs** (2019), and **@hardware.hobbies** and **@swifty.setups** (2020). It has since grown into a chassis *system*: the same parametric Inventor model has produced a series of builds, each refining the last. Every photo here is mine.
 

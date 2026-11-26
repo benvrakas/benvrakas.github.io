@@ -28,7 +28,7 @@ frame-interior | Inside the frame: loop, wiring and fans
 head-assembled | Early assembled head
 :::
 
-## Firmware
+## Firmware {: theme=code }
 
 PlatformIO / Arduino C++ structured like a small product rather than a sketch:
 
@@ -59,7 +59,7 @@ controller-running | Running in the fixture
 blower | Head blower
 :::
 
-## Optics and housing
+## Optics and housing {: theme=lab }
 
 :::gallery
 cad-housing-1 | Lens housing in CAD

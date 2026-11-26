@@ -32,7 +32,7 @@ printhead-v21 | Printhead v2.1 body
 printhead-section | Printhead with hotend
 :::
 
-## RRFarm: managing the fleet
+## RRFarm: managing the fleet {: theme=code }
 
 A small Python web app (FastAPI) for running the farm:
 

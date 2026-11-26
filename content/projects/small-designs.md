@@ -29,7 +29,7 @@ knife-real | Built and in use
 
 :::youtube Fgf2AhU01Mg | 3D-printed knife sharpener
 
-## HyperX Cloud headset clasp (2025)
+## HyperX Cloud headset clasp (2025) {: theme=print }
 
 The plastic buckle on HyperX Cloud 2 and Cloud Alpha headsets often breaks. My replacement is my most-downloaded model on Printables.
 
@@ -39,7 +39,7 @@ hyperx-install | Fitting a replacement
 hyperx-review | A user's 5-star review: theirs was the only replacement of the three they tried that printed cleanly and fit
 :::
 
-## Vertical GPU mount and modular storage (2024)
+## Vertical GPU mount and modular storage (2024) {: theme=print }
 
 A vertical GPU mount that fits over any ATX motherboard, and a parametric system of magnetic stacking bins printed on the Ender farm.
 
@@ -50,7 +50,7 @@ magnetic-bins | Parametric magnetic storage bins
 magnetic-bins-2 | Stacked
 :::
 
-## Keder rail attachments for campers (2026)
+## Keder rail attachments for campers (2026) {: theme=print }
 
 A set of printed hooks, pegs and stops that attach to the keder (awning) rail on campers, plus a matching tool. Designed as a product line and not yet listed for sale.
 

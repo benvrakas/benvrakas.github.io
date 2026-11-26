@@ -60,7 +60,7 @@ strips-controller | Smart Light Strips ESP32-S3 controller board
 
 - **Voxlume** is the shared brain. It maps every LED in the house, on panels and strips alike, to a point in 3D room space, so one effect can sweep through a whole home instead of running along a strip.
 
-## Interactive explainers
+## Interactive explainers {: theme=code }
 
 The full design is documented in two interactive pages: a **[design reference](../explainers/light-panels/design-reference.html)** (boards as laid out, contacts, corners, controller, ID circuit, power) and a **[planning page](../explainers/light-panels/planning.html)** (mechanics, firmware, software, per-panel cost breakdown against commercial panels, and the path to a product).
 
@@ -69,7 +69,7 @@ explainer-reference | Design reference
 explainer-planning | Planning page
 :::
 
-## Status and process
+## Status and process {: theme=code }
 
 The electronics are fully specified and the **mechanical parts have been printed and test-fitted as prototypes**. Boards are next. Every design choice is recorded as a numbered decision record, and figures are generated straight from the design files.
 

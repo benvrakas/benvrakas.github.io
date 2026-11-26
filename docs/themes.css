@@ -1,0 +1,229 @@
+/* ======================================================================
+   Themes. Each sets tokens; body (page theme), .psec (section), .card,
+   .hsec and filter buttons all pick them up.
+   print = layer lines / G-code · pcb = copper & silkscreen · code = editor
+   lab = hex lattice / elements · cad = blueprint drawing sheet
+   ====================================================================== */
+:root { --tex: none; --ts: auto; --str: #ecc48d; --fn: #82aaff; }
+.t-print {
+  --bg: #100e0c; --bg2: #17130f; --card: #1b1713; --line: #302922; --muted: #a89d91;
+  --accent: #ff8f3a; --accent2: #ffd166;
+  --tex: radial-gradient(1100px 420px at 75% -120px, rgba(255, 143, 58, .09), transparent 70%),
+         repeating-linear-gradient(180deg, rgba(255, 255, 255, .03) 0 1px, transparent 1px 3px, rgba(0, 0, 0, .3) 3px 4px);
+  --ts: auto, auto;
+}
+.t-pcb {
+  --bg: #08110d; --bg2: #0c1813; --card: #0f1d17; --line: #1e3b2e; --muted: #95ab9e;
+  --accent: #e0a458; --accent2: #e8efe9;
+  --tex: radial-gradient(1100px 420px at 75% -120px, rgba(224, 164, 88, .08), transparent 70%),
+         url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' fill='none' stroke='%23e0a458' stroke-opacity='.11' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M0 20h30l20 20h30l20-20h20M0 76h44l12 12h20l12-12h32M0 104h60l8-8h20l8 8h24M64 40v12M30 76v-14'/%3E%3Ccircle cx='64' cy='56' r='3.5'/%3E%3Ccircle cx='30' cy='58' r='3.5'/%3E%3Crect x='92' y='50' width='6' height='5' rx='1'/%3E%3Crect x='104' y='50' width='6' height='5' rx='1'/%3E%3C/svg%3E");
+  --ts: auto, 120px 120px;
+}
+.t-code {
+  --bg: #0d1117; --bg2: #121820; --card: #151c25; --line: #252e3a; --muted: #8d99a8;
+  --accent: #c792ea; --accent2: #7fdbca;
+  --tex: radial-gradient(1100px 420px at 75% -120px, rgba(199, 146, 234, .09), transparent 70%);
+  --ts: auto;
+}
+.t-lab {
+  --bg: #0c0d16; --bg2: #121424; --card: #151829; --line: #282c47; --muted: #9ca2bb;
+  --accent: #5ee6c8; --accent2: #b494ff;
+  --tex: radial-gradient(1100px 420px at 75% -120px, rgba(94, 230, 200, .07), transparent 70%),
+         url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='42' height='24.249' fill='none' stroke='%235ee6c8' stroke-opacity='.075' stroke-width='1.2'%3E%3Cpath d='M0 12.124L7 0H21L28 12.124L21 24.249H7Z M28 12.124H42'/%3E%3C/svg%3E");
+  --ts: auto, 42px 24.249px;
+}
+.t-cad {
+  --bg: #0a1220; --bg2: #0e192b; --card: #111e33; --line: #213354; --muted: #91a5c1;
+  --accent: #62b6ff; --accent2: #dbe9ff;
+  --tex: linear-gradient(rgba(98, 182, 255, .085) 1px, transparent 1px), linear-gradient(90deg, rgba(98, 182, 255, .085) 1px, transparent 1px),
+         linear-gradient(rgba(98, 182, 255, .035) 1px, transparent 1px), linear-gradient(90deg, rgba(98, 182, 255, .035) 1px, transparent 1px);
+  --ts: 48px 48px, 48px 48px, 12px 12px, 12px 12px;
+}
+body.proj { background: var(--tex), var(--bg); background-size: var(--ts); background-attachment: fixed; }
+
+/* badges, dots */
+.tbadge { font: 600 10px/1 var(--mono); letter-spacing: .08em; color: var(--accent); border: 1px solid color-mix(in srgb, var(--accent) 45%, transparent); padding: 3px 6px; border-radius: 4px; margin-left: 8px; vertical-align: 1px; }
+.thumb .tbadge { position: absolute; top: 10px; left: 10px; margin: 0; background: color-mix(in srgb, var(--bg) 82%, transparent); backdrop-filter: blur(4px); }
+.card .thumb::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--accent); opacity: .85; }
+.tdot { flex: none; width: 7px; height: 7px; border-radius: 2px; background: var(--accent); align-self: center; }
+.filters button[class^="t-"]::before { content: ""; display: inline-block; width: 7px; height: 7px; border-radius: 2px; background: var(--accent); margin-right: 7px; vertical-align: 1px; }
+.filters button.on::before { background: #111; }
+
+/* themed chips */
+.t-code .chips li { color: var(--str); }
+.t-code .chips li::before, .t-code .chips li::after { content: '"'; opacity: .55; }
+.t-cad .chips li { border-radius: 2px; text-transform: uppercase; font-size: 10.5px; letter-spacing: .05em; }
+.t-pcb .chips li { border-radius: 3px; }
+.t-pcb .chips li::before { content: ""; display: inline-block; width: 5px; height: 5px; border-radius: 50%; border: 1.5px solid var(--accent); margin-right: 6px; vertical-align: 1px; }
+.t-print .chips li { border-radius: 4px; background: repeating-linear-gradient(180deg, rgba(255, 255, 255, .035) 0 1px, transparent 1px 3px), var(--bg2); }
+
+/* project header with visualization */
+.phead { display: grid; grid-template-columns: minmax(0, 1fr) 360px; gap: 28px; align-items: end; }
+@media (max-width: 1180px) { .phead { grid-template-columns: 1fr; gap: 20px; } .phead .viz { max-width: 540px; } }
+.viz { position: relative; height: 210px; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: var(--tex), var(--bg2); background-size: var(--ts); user-select: none; }
+.viz svg { width: 100%; height: 100%; display: block; }
+.viz text { font-family: var(--mono); }
+.viz .cap { font-size: 9.5px; fill: var(--muted); }
+
+/* sections */
+.psec { position: relative; }
+.shead { margin: 48px 0 12px; }
+.shead h2 { margin: 6px 0 0; }
+.psec.own, .hsec { background: var(--tex), color-mix(in srgb, var(--bg) 92%, #000); background-size: var(--ts); border: 1px solid var(--line); border-radius: 14px; padding: 4px 24px 22px; margin: 40px 0; }
+.psec.own .shead { margin-top: 20px; }
+.hsec { margin: 64px auto 0; }
+.hsec > .shrow { margin: 18px 0 20px; }
+.stag { font: 500 11.5px/1.4 var(--mono); color: var(--muted); letter-spacing: .02em; display: inline-flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.stag b { color: var(--accent); font-weight: 600; }
+.stag em { font-style: normal; }
+
+:is(.psec, .hsec).t-pcb .stag { color: var(--accent); }
+:is(.psec, .hsec).t-pcb .stag b { color: var(--accent2); border: 1px solid currentColor; padding: 0 5px; border-radius: 2px; }
+:is(.psec, .hsec).t-pcb .stag i { position: relative; width: 34px; height: 2px; background: var(--accent); margin: 0 6px; }
+:is(.psec, .hsec).t-pcb .stag i::before, :is(.psec, .hsec).t-pcb .stag i::after { content: ""; position: absolute; top: -3px; width: 4px; height: 4px; border-radius: 50%; background: var(--bg); border: 2px solid var(--accent); }
+:is(.psec, .hsec).t-pcb .stag i::before { left: -6px; }
+:is(.psec, .hsec).t-pcb .stag i::after { right: -6px; }
+:is(.psec, .hsec).t-code .stag b { color: var(--accent); }
+:is(.psec, .hsec).t-code .stag em { color: var(--fn); }
+.psec.t-code .shead h2 { font-family: var(--mono); font-size: 21px; letter-spacing: -.01em; }
+.psec.t-cad .shead::before { content: ""; display: block; height: 2px; margin-bottom: 10px; opacity: .5;
+  background: repeating-linear-gradient(90deg, var(--accent) 0 26px, transparent 26px 32px, var(--accent) 32px 36px, transparent 36px 42px); }
+.psec.t-cad .shead h2 { text-transform: uppercase; letter-spacing: .04em; font-size: 21px; }
+.psec.t-cad .stag b { letter-spacing: .06em; }
+.psec.t-lab .shead { display: flex; align-items: center; gap: 14px; }
+.psec.t-lab .shead h2 { margin: 0; }
+
+/* element tile (lab) */
+.stag.elem, .elem { display: inline-grid; grid-template-rows: auto 1fr auto; gap: 0; width: 54px; height: 58px; padding: 4px 5px 3px; border: 1px solid var(--accent); border-radius: 6px; background: color-mix(in srgb, var(--accent) 10%, transparent); color: var(--accent); line-height: 1; text-align: center; flex: none; }
+.elem sup { font: 600 9.5px var(--mono); text-align: left; vertical-align: 0; }
+.elem b { font: 700 22px var(--sans); color: var(--text); align-self: center; letter-spacing: 0; }
+.elem sub { font: 500 8.5px var(--mono); color: var(--muted); vertical-align: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.hsec .shrow .elem { height: 52px; width: 50px; }
+
+/* captions, images, code gutter per section theme */
+.psec.t-print figcaption::before { content: "; "; color: var(--accent); font-family: var(--mono); }
+.psec.t-code figcaption::before { content: "// "; color: var(--muted); font-family: var(--mono); }
+body.proj { counter-reset: fig; }
+.psec.t-cad figure { counter-increment: fig; }
+.psec.t-cad figcaption::before { content: "FIG. " counter(fig) "  "; font: 600 10.5px var(--mono); color: var(--accent); letter-spacing: .04em; }
+.psec.t-lab figcaption::before { content: "obs. "; color: var(--accent); font-family: var(--mono); }
+.psec.t-pcb figcaption::before { content: "▸ "; color: var(--accent); }
+.psec.t-cad .gallery img { border-radius: 3px; border-color: color-mix(in srgb, var(--accent) 35%, var(--line)); }
+.psec.t-pcb .gallery img { border-color: color-mix(in srgb, var(--accent) 30%, var(--line)); }
+.psec.t-code { counter-reset: ln; }
+.psec.t-code > :is(p, ul, ol, table, blockquote, .gallery, figure, .ytrow) { position: relative; }
+.psec.t-code > :is(p, ul, ol, table, blockquote, .gallery, figure, .ytrow)::before { counter-increment: ln; content: counter(ln); position: absolute; left: -36px; top: .2em; width: 24px; text-align: right; font: 11px var(--mono); color: #4b5668; }
+.psec.t-code.own { padding-left: 52px; }
+.psec.t-code.own .shead { margin-left: -28px; }
+@media (max-width: 960px) { .psec.t-code:not(.own) > *::before { display: none; } }
+.psec.t-code blockquote { border-left-color: var(--line); font-style: italic; }
+.psec.t-code code { color: var(--str); }
+
+/* home: stats as element tiles */
+.hstats .stats { grid-template-columns: repeat(auto-fit, minmax(178px, 1fr)); gap: 8px; }
+.stat { --h: var(--accent); position: relative; display: grid; grid-template-columns: 48px 1fr; column-gap: 10px; align-items: center; min-height: 72px;
+  background: color-mix(in srgb, var(--h) 8%, var(--card)); border: 1px solid color-mix(in srgb, var(--h) 40%, transparent); border-radius: 8px; padding: 10px 12px 10px 8px; }
+.stat sup { position: absolute; top: 6px; left: 8px; font: 600 9.5px var(--mono); color: var(--h); }
+.stat i { grid-row: 1 / 3; font: 700 28px/1 var(--sans); font-style: normal; color: var(--h); text-align: center; padding-top: 10px; }
+.stat b { display: block; font: 700 18px/1.15 var(--sans); letter-spacing: -.01em; align-self: end; }
+.stat span { font-size: 12px; color: var(--muted); line-height: 1.3; align-self: start; }
+.stat:nth-child(6n+1) { --h: #62b6ff; } .stat:nth-child(6n+2) { --h: #ff8f3a; } .stat:nth-child(6n+3) { --h: #b494ff; }
+.stat:nth-child(6n+4) { --h: #5ee6c8; } .stat:nth-child(6n+5) { --h: #ffd166; } .stat:nth-child(6n+6) { --h: #e0a458; }
+
+/* home: timeline as a layer stack */
+.hsec.t-print .timeline li { position: relative; }
+.hsec.t-print .timeline li::before { content: ""; position: absolute; left: -6px; top: 16px; width: 10px; height: 10px; border-radius: 2px; background: var(--accent); }
+.hsec.t-print .timeline li a:hover { background: color-mix(in srgb, var(--accent) 8%, transparent); }
+
+/* home: experience as git log */
+.gitlog { position: relative; border-left: 2px solid var(--line); margin-left: 6px; padding-left: 24px; }
+.gitlog h3 { position: relative; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; }
+.gitlog h3::before { content: ""; position: absolute; left: -32px; top: .3em; width: 10px; height: 10px; border-radius: 50%; background: var(--bg); border: 2px solid var(--accent); }
+.gitlog h3:first-child::before { background: var(--accent); }
+.gitlog h3:first-child::after { content: "HEAD → main"; font: 600 10.5px var(--mono); color: var(--accent2); border: 1px solid currentColor; padding: 1px 7px; border-radius: 10px; }
+.prose .gitlog .hash { font: 600 12.5px var(--mono); color: var(--str); background: none; padding: 0; }
+.gitlog h3 + p em { font: 12.5px var(--mono); font-style: normal; color: var(--muted); }
+
+/* home: about with molecule */
+.about .viz { float: right; width: 300px; height: 220px; margin: 6px 0 14px 22px; touch-action: pan-y; cursor: grab; }
+.about .viz:active { cursor: grabbing; }
+@media (max-width: 700px) { .about .viz { float: none; width: 100%; margin: 0 0 16px; } }
+.hsec.t-lab blockquote { border-left-color: var(--accent); color: var(--text); font-size: 18px; }
+
+/* home: contact as a pin header */
+.pinout ul { list-style: none; padding-left: 0; counter-reset: pin; }
+.pinout li { counter-increment: pin; position: relative; padding-left: 66px; margin: 9px 0; }
+.pinout li::before { content: counter(pin); position: absolute; left: 0; top: 1px; width: 20px; height: 20px; border-radius: 50%; border: 2px solid var(--accent); display: grid; place-items: center; font: 600 10px var(--mono); color: var(--accent); background: var(--bg); box-sizing: border-box; }
+.pinout li:first-child::before { border-radius: 3px; }
+.pinout li::after { content: ""; position: absolute; left: 24px; top: 10px; width: 32px; height: 2px; background: var(--accent); opacity: .7; }
+
+/* viz: print */
+.viz .glbg { fill: rgba(0, 0, 0, .35); }
+.viz .gl text { font-size: 9px; fill: #cdbfae; }
+.viz .gl text.cm { fill: #7d7366; }
+.viz .hl { fill: color-mix(in srgb, var(--accent) 22%, transparent); }
+.viz .bed { fill: #221c17; stroke: #3a3029; }
+.viz .bedl { stroke: #2d251f; stroke-width: .6; }
+.viz line.outer { stroke: #ff8f3a; stroke-width: 1.8; stroke-linecap: round; }
+.viz line.inner { stroke: #ffd166; stroke-width: 1.5; stroke-linecap: round; }
+.viz line.fill { stroke: #d65f3c; stroke-width: 1.05; stroke-linecap: round; }
+.viz line.travel { stroke: #5ab0ff; stroke-width: .6; stroke-dasharray: 2 2; }
+.viz .old line.outer { stroke: #9b5223; } .viz .old line.inner { stroke: #9a7a33; } .viz .old line.fill { stroke: #7a3a27; }
+.viz .noz path { fill: #e8eaed; filter: drop-shadow(0 0 4px rgba(255, 143, 58, .8)); }
+
+/* viz: pcb */
+.viz .board { fill: #0e2a1e; stroke: #2f6b4f; stroke-width: 1.5; }
+.viz .hole { fill: var(--bg); stroke: #c9a15f; stroke-width: 2.5; }
+.viz .tr { fill: none; stroke: #b9864a; stroke-opacity: .8; stroke-width: 2; stroke-linejoin: round; }
+.viz .sig { fill: none; stroke: #ffe2a8; stroke-width: 2.2; stroke-linecap: round; stroke-dasharray: 14 300; animation: sig 3s linear infinite; filter: drop-shadow(0 0 3px #ffb347); }
+@keyframes sig { from { stroke-dashoffset: 314; } to { stroke-dashoffset: 0; } }
+.viz .via { fill: #0e2a1e; stroke: #d8a860; stroke-width: 2; }
+.viz .pad { fill: #d9ae6a; }
+.viz .th { fill: #0e2a1e; stroke: #d9ae6a; stroke-width: 3; }
+.viz .res { fill: #1b1b1b; }
+.viz .ic { fill: #15171a; stroke: #2b2f35; }
+.viz .pin1 { fill: #3a3f46; }
+.viz .icl { fill: #8c939c; font-size: 7px; text-anchor: middle; letter-spacing: .08em; }
+.viz .icl.sm { font-size: 5.5px; }
+.viz .silk text { fill: #e8efe9; font-size: 8px; opacity: .85; }
+.viz .silk .bt { font-size: 7.5px; letter-spacing: .06em; }
+
+/* viz: code */
+.viz .ed { height: 100%; display: flex; flex-direction: column; background: #0b0f14; }
+.viz .tabs { display: flex; font: 11px var(--mono); border-bottom: 1px solid var(--line); background: #10151c; }
+.viz .tabs span { padding: 6px 12px; color: var(--muted); border-right: 1px solid var(--line); }
+.viz .tabs .on { color: var(--text); background: #0b0f14; box-shadow: inset 0 2px 0 var(--accent); }
+.viz .eb { display: flex; flex: 1; overflow: hidden; }
+.viz pre { margin: 0; padding: 8px 0; font: 11.5px/1.6 var(--mono); }
+.viz .gut { color: #3e4857; text-align: right; padding: 8px 10px 8px 12px; user-select: none; }
+.viz .src { color: #d6deeb; white-space: pre-wrap; padding-right: 10px; }
+.viz .kw { color: #c792ea; } .viz .fn { color: #82aaff; } .viz .str { color: #ecc48d; } .viz .cm { color: #637777; font-style: italic; }
+.viz .caret { display: inline-block; width: 7px; height: 13px; background: var(--accent); vertical-align: -2px; animation: blink 1s steps(1) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+
+/* viz: lab */
+.viz .bond { stroke: #8a93a6; stroke-width: 3; stroke-linecap: round; }
+.viz .atom { stroke: rgba(0, 0, 0, .35); stroke-width: .6; }
+
+/* viz: cad */
+.viz .frame { fill: none; stroke: var(--accent); stroke-opacity: .55; stroke-width: .8; }
+.viz .ol { fill: none; stroke: #dbe9ff; stroke-width: 1.3; stroke-dasharray: 1; stroke-dashoffset: 1; animation: draw 1.8s ease-out forwards; }
+.viz .face { fill: rgba(98, 182, 255, .07); }
+.viz .cl { stroke: #62b6ff; stroke-width: .6; stroke-dasharray: 8 2 2 2; opacity: 0; animation: fade .6s 1.4s forwards; }
+.viz .hid { stroke: #dbe9ff; stroke-width: .7; stroke-dasharray: 3 2; opacity: 0; animation: fade .6s 1.4s forwards; }
+.viz .dim { stroke: #62b6ff; stroke-width: .55; opacity: 0; animation: fade .6s 1.7s forwards; }
+.viz .ar { fill: #62b6ff; opacity: 0; animation: fade .6s 1.7s forwards; }
+.viz .dt { fill: #9fc9ff; font-size: 8px; opacity: 0; animation: fade .6s 1.9s forwards; }
+.viz .tl { fill: #62b6ff; font-size: 5.5px; letter-spacing: .08em; }
+.viz .tv { fill: #dbe9ff; font-size: 8px; font-weight: 600; }
+@keyframes draw { to { stroke-dashoffset: 0; } }
+@keyframes fade { to { opacity: 1; } }
+.viz svg.done .ol { animation: none; stroke-dashoffset: 0; stroke-dasharray: none; }
+.viz svg.done :is(.cl, .hid, .dim, .ar, .dt) { animation: none; opacity: 1; }
+
+@media (prefers-reduced-motion: reduce) {
+  .viz *, .viz .caret { animation: none !important; }
+  .viz .ol { stroke-dashoffset: 0; stroke-dasharray: none; }
+  .viz :is(.cl, .hid, .dim, .ar, .dt) { opacity: 1; }
+  .card { transition: none; }
+}

@@ -18,7 +18,7 @@ young-planer | Planing stock
 young-clamp | Glue-up
 :::
 
-## Maker Faire Milwaukee (2012–2016)
+## Maker Faire Milwaukee (2012–2016) {: theme=print }
 
 Vrakas Labs had a booth at Maker Faire Milwaukee every year from 2012 to 2016, showing printers, PCs and projects. I also gave public seminars on 3D modeling in Autodesk Inventor.
 
@@ -28,7 +28,7 @@ makerfaire-2014 | The booth
 makerfaire-seminar | Teaching a 3D-modeling seminar
 :::
 
-## Project Clearwater (2014–2016)
+## Project Clearwater (2014–2016) {: theme=print }
 
 Clearwater was my second custom PC case and the first to use 3D printing: a fully transparent, water-cooled case built from **3D-printed joints and laser-cut acrylic panels**, with a Pentium G3258 at 4.8 GHz and a GTX 960, both **TEC (Peltier) cooled**. Nvidia commented "great work" on it, and it later caught AMD's eye, which led to the sponsored [Carbon 3D chassis](carbon-3d-pc.html).
 
@@ -62,7 +62,7 @@ rockets-award | Competition awards
 rocket | One of our high-power rockets
 :::
 
-## DIY e-bike (2017)
+## DIY e-bike (2017) {: theme=pcb }
 
 I built an e-bike in high school because commercial ones cost too much. It's made almost entirely from **recycled parts**. Everything except the speed controller came to about **$65**. It was one of the projects that led to the [electric longboards](electric-longboards.html).
 

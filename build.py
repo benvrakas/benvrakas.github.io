@@ -6,16 +6,17 @@
 content/projects/*.md : one file per project. Front matter between --- lines (key: value):
   title, years, tags (comma list), areas (comma list: mechanical, electrical, software, printing, fabrication),
   summary, hero (media name), codeart (text shown when no hero), order (number), draft (true/false),
-  links ("Label | url ; Label | url")
+  links ("Label | url ; Label | url"), theme (print | pcb | code | lab | cad; default from first area)
+  A section can take its own theme: ## Firmware {: theme=code }
 Body is Markdown plus these blocks (media names resolve to docs/media/<slug>/<name>.jpg):
   :::gallery            one "name | caption" per line, closed by ::: (sorted by capture date; dates appended)
   :::video name | caption     muted autoplay loop clip
   :::clip name | caption      clip with controls and sound
   :::youtube VIDEO_ID | caption
-content/home.md : front matter (eyebrow, tagline, intro, skills, stats "value|label ; ...", hero_image)
+content/home.md : front matter (eyebrow, tagline, intro, skills, stats "value|label|Sym ; ...", hero_image)
   plus <!-- section: name --> blocks: experience, about, contact.
 """
-import html, json, os, re, sys
+import hashlib, html, json, os, re, sys
 from datetime import date
 import markdown
 
@@ -28,6 +29,12 @@ RESUME_PDF = 'Ben_Vrakas_Resume.pdf'
 AREAS = [('mechanical', 'Mechanical'), ('electrical', 'Electrical'), ('software', 'Software'),
          ('printing', '3D printing'), ('fabrication', 'Fabrication')]
 MONTHS = 'Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec'.split()
+# page/section themes: name -> (badge, theme-color)
+THEMES = {'print': ('G-CODE', '#100e0c'), 'pcb': ('PCB', '#08110d'), 'code': ('SRC', '#0d1117'),
+          'lab': ('LAB', '#0c0d16'), 'cad': ('DWG', '#0a1220')}
+AREA_THEME = {'printing': 'print', 'electrical': 'pcb', 'software': 'code', 'mechanical': 'cad', 'fabrication': 'lab'}
+SECTION_LETTERS = 'ABCDEFGHJKLMNPRTUVWY'   # drawing section labels skip I, O, Q, S, X, Z
+STOP = {'the', 'and', 'a', 'an', 'of', 'for', 'in', 'my', 'to', 'with', 'own'}
 
 
 def front_matter(text):
@@ -113,7 +120,66 @@ def md(text):
     return markdown.markdown(text, extensions=['tables', 'attr_list', 'md_in_html', 'sane_lists', 'toc'])
 
 
-def page(title, body, prefix='', desc='', og_image='', active='', page_path=''):
+def theme_of(p):
+    t = p.get('theme', '').strip()
+    return t if t in THEMES else AREA_THEME.get((p.get('areas') or ['mechanical'])[0], 'cad')
+
+
+def _plain(s):
+    return html.unescape(re.sub(r'<[^>]+>', '', s))
+
+
+def _words(s, n=2):
+    s = re.sub(r'\([^)]*\)', ' ', _plain(s)).lower()
+    w = [x.replace('-', '') for x in re.findall(r'[a-z0-9]+(?:-[a-z0-9]+)*', s) if x not in STOP]
+    return w[:n] or ['section']
+
+
+def sec_tag(theme, i, text):
+    """The small themed label above each section heading."""
+    w = _words(text)
+    if theme == 'print':
+        return f'<span class="stag">;LAYER:{i} <b>Z{i * 0.2:.2f}</b> ;TYPE:{"-".join(w).upper()}</span>'
+    if theme == 'pcb':
+        return f'<span class="stag"><b>U{i}</b><i></i>NET_{"_".join(w).upper()}</span>'
+    if theme == 'code':
+        return f'<span class="stag"><b>def</b> <em>{"_".join(w)}</em>():</span>'
+    if theme == 'lab':
+        sym = w[0][0].upper() + (w[1][0] if len(w) > 1 else w[0][1:2])
+        yr = re.search(r'(19|20)\d\d', _plain(text))
+        return f'<span class="stag elem"><sup>{i}</sup><b>{sym}</b><sub>{yr.group(0) if yr else w[0][:9]}</sub></span>'
+    L = SECTION_LETTERS[(i - 1) % len(SECTION_LETTERS)]
+    return f'<span class="stag">SECTION <b>{L}–{L}</b></span>'
+
+
+def wrap_sections(content, pt):
+    """Split rendered HTML at each h2 into <section class="psec t-x">; a section's own theme (theme="x") overrides the page's."""
+    out, i = [], 0
+    for part in re.split(r'(?=<h2[\s>])', content):
+        if not part.strip():
+            continue
+        m = re.match(r'<h2([^>]*)>(.*?)</h2>', part, re.S)
+        if not m:
+            out.append(f'<section class="psec t-{pt}">{part}</section>')
+            continue
+        i += 1
+        attrs, text = m.group(1), m.group(2)
+        tm = re.search(r'\stheme="(\w+)"', attrs)
+        th = tm.group(1) if tm and tm.group(1) in THEMES else pt
+        idm = re.search(r'\sid="([^"]+)"', attrs)
+        sid = f' id="{idm.group(1)}"' if idm else ''
+        own = ' own' if th != pt else ''
+        out.append(f'<section class="psec t-{th}{own}"{sid}><div class="shead">{sec_tag(th, i, text)}<h2>{text}</h2></div>'
+                   f'{part[m.end():]}</section>')
+    return ''.join(out)
+
+
+def viz(theme, title='', years='', tags=(), slug='', seed=7):
+    return (f'<div class="viz" data-viz="{theme}" data-title="{html.escape(title)}" data-years="{html.escape(years)}" '
+            f'data-tags="{html.escape("|".join(tags))}" data-slug="{slug}" data-seed="{seed}" aria-hidden="true"></div>')
+
+
+def page(title, body, prefix='', desc='', og_image='', active='', page_path='', color='#0d0f12'):
     nav = ''.join(f'<a href="{prefix + u}">{n}</a>' for n, u in NAV)
     nav += '<a class="gh" href="https://github.com/benvrakas">GitHub ↗</a>'
     og = f'<meta property="og:image" content="{SITE["url"]}/{og_image}">' if og_image else ''
@@ -124,7 +190,7 @@ def page(title, body, prefix='', desc='', og_image='', active='', page_path=''):
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{html.escape(title)}</title>
 <meta name="description" content="{html.escape(desc)}">
-<meta name="theme-color" content="#0e1013">
+<meta name="theme-color" content="{color}">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Ben Vrakas">
 <meta property="og:url" content="{SITE["url"]}/{html.escape(page_path)}">
@@ -136,6 +202,7 @@ def page(title, body, prefix='', desc='', og_image='', active='', page_path=''):
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{prefix}style.css">
+<link rel="stylesheet" href="{prefix}themes.css">
 </head>
 <body class="{active}">
 <header class="top"><div class="wrap"><a class="brand" href="{prefix}index.html"><span class="mark">BV</span>Ben Vrakas</a><nav>{nav}</nav></div></header>
@@ -146,6 +213,7 @@ def page(title, body, prefix='', desc='', og_image='', active='', page_path=''):
 <span><a href="https://github.com/benvrakas">GitHub</a> · <a href="https://www.printables.com/@VLabs_256532">Printables</a> · <a href="https://www.thingiverse.com/benvrakas/designs">Thingiverse</a> · <a href="https://ficsit.app/user/benvrakas">ficsit.app</a> · <a href="https://www.youtube.com/channel/UC1nUGgfhgWf4mYUwQ9nH5FQ">YouTube</a></span></div></footer>
 <div id="lightbox" hidden><button class="lbx" aria-label="Close">×</button><button class="lbp" aria-label="Previous">‹</button><figure><img alt=""><figcaption></figcaption></figure><button class="lbn" aria-label="Next">›</button></div>
 <script src="{prefix}site.js" defer></script>
+<script src="{prefix}viz.js" defer></script>
 </body>
 </html>
 '''
@@ -187,8 +255,10 @@ def links_html(s):
 
 def build_project(p, projects):
     slug, pre = p['slug'], '../'
+    t = theme_of(p)
     content = md(blocks(slug, p['body'], pre))
-    toc = re.findall(r'<h2 id="([^"]+)">(.*?)</h2>', content)
+    toc = re.findall(r'<h2[^>]*\bid="([^"]+)"[^>]*>(.*?)</h2>', content)
+    content = wrap_sections(content, t)
     i = projects.index(p)
     prev, nxt = (projects[i - 1] if i else None), (projects[i + 1] if i + 1 < len(projects) else None)
     hero = (f'<div class="phero"><img src="{pre}{media(slug, p["hero"])}" alt="{html.escape(p["title"])}"></div>'
@@ -198,34 +268,37 @@ def build_project(p, projects):
         side += '<p class="sh2">On this page</p><ul class="toc"><li><a href="#top">Overview</a></li>' + ''.join(
             f'<li><a href="#{a}">{t}</a></li>' for a, t in toc) + '</ul>'
     side += '<p class="sh2">All projects</p><ul class="plist">' + ''.join(
-        f'<li{" class=cur" if q is p else ""}><a href="{q["slug"]}.html"><span>{html.escape(q["title"])}</span>'
+        f'<li{" class=cur" if q is p else ""}><a href="{q["slug"]}.html"><i class="tdot t-{theme_of(q)}"></i><span>{html.escape(q["title"])}</span>'
         f'<em>{q["y0"] or ""}</em></a></li>' for q in projects) + '</ul></div></aside>'
     pager = '<nav class="pager">' + (f'<a href="{prev["slug"]}.html">← {html.escape(prev["title"])}</a>' if prev else '<span></span>') \
         + (f'<a href="{nxt["slug"]}.html">{html.escape(nxt["title"])} →</a>' if nxt else '') + '</nav>'
     body = f'''<div class="wrap playout" id="top">
 {side}
 <article class="project">
+<header class="phead"><div class="phtext">
 <a class="back" href="../index.html#work">← All work</a>
-<p class="eyebrow">{html.escape(p.get("years", ""))}</p>
+<p class="eyebrow">{html.escape(p.get("years", ""))} <span class="tbadge">{THEMES[t][0]}</span></p>
 <h1>{html.escape(p["title"])}</h1>
 <p class="lede">{html.escape(p.get("summary", ""))}</p>
 {chips(p["tags"])}
 {links_html(p.get("links"))}
+</div>{viz(t, p["title"], p.get("years", ""), p["tags"][:3], slug, int(p["order"] * 7) + 3)}</header>
 {hero}
 <div class="prose">{content}</div>
 {pager}
 </article>
 </div>'''
     og = media(slug, p['hero']) if p.get('hero') else ''
-    return page(f'{p["title"]} · Ben Vrakas', body, pre, p.get('summary', ''), og, 'proj', f'projects/{slug}.html')
+    return page(f'{p["title"]} · Ben Vrakas', body, pre, p.get('summary', ''), og, f'proj t-{t}', f'projects/{slug}.html', THEMES[t][1])
 
 
 def card(p):
     slug = p['slug']
     img = (f'<img src="{media(slug, p["hero"], True)}" alt="" loading="lazy">' if p.get('hero')
            else f'<div class="codeart"><span>{html.escape(p.get("codeart", "</>"))}</span></div>')
-    return f'''<a class="card" href="projects/{slug}.html" data-areas="{' '.join(p['areas'])}">
-<div class="thumb">{img}</div>
+    t = theme_of(p)
+    return f'''<a class="card t-{t}" href="projects/{slug}.html" data-areas="{' '.join(p['areas'])}">
+<div class="thumb">{img}<span class="tbadge">{THEMES[t][0]}</span></div>
 <div class="cbody"><p class="eyebrow">{html.escape(p.get("years", ""))}</p><h3>{html.escape(p["title"])}</h3>
 <p>{html.escape(p.get("summary", ""))}</p>{chips(p["tags"][:4])}</div></a>'''
 
@@ -234,18 +307,26 @@ def build_home(projects):
     meta, body = front_matter(open(os.path.join(CONTENT, 'home.md'), encoding='utf-8').read())
     sections = re.split(r'^<!--\s*section:\s*(\w+)\s*-->\s*$', body, flags=re.M)
     sec = {sections[i]: sections[i + 1] for i in range(1, len(sections), 2)}
-    stats = ''.join(f'<div class="stat"><b>{html.escape(v.strip())}</b><span>{html.escape(l.strip())}</span></div>'
-                    for v, _, l in (s.partition('|') for s in meta.get('stats', '').split(';') if s.strip()))
+    stats = ''
+    for n, st in enumerate((x for x in meta.get('stats', '').split(';') if x.strip()), 1):
+        v, l, sym = ([x.strip() for x in st.split('|')] + ['', ''])[:3]
+        stats += (f'<div class="stat"><sup>{n:02d}</sup><i>{html.escape(sym)}</i>'
+                  f'<b>{html.escape(v)}</b><span>{html.escape(l)}</span></div>')
     used = {a for p in projects for a in p['areas']}
     filt = '<div class="filters" role="group" aria-label="Filter projects"><button class="on" data-f="all">All</button>' + ''.join(
-        f'<button data-f="{k}">{v}</button>' for k, v in AREAS if k in used) + '</div>'
+        f'<button class="t-{AREA_THEME[k]}" data-f="{k}">{v}</button>' for k, v in AREAS if k in used) + '</div>'
     grid = '<div class="grid">' + ''.join(card(p) for p in projects) + '</div>'
     tl = sorted(projects, key=lambda p: (-p['y1'], -p['y0']))
     timeline = '<ol class="timeline">' + ''.join(
-        f'<li data-areas="{" ".join(p["areas"])}"><a href="projects/{p["slug"]}.html"><span class="ty">{html.escape(p.get("years", ""))}</span>'
+        f'<li class="t-{theme_of(p)}" data-areas="{" ".join(p["areas"])}"><a href="projects/{p["slug"]}.html"><span class="ty">{html.escape(p.get("years", ""))}</span>'
         f'<span class="tt">{html.escape(p["title"])}</span><span class="ts">{html.escape(p.get("summary", ""))}</span></a></li>'
         for p in tl) + '</ol>'
     hero_img = meta.get('hero_image', '')
+    exp = re.sub(r'<h3>(.*?)</h3>', lambda m: f'<h3><code class="hash">{hashlib.sha1(_plain(m.group(1)).encode()).hexdigest()[:7]}</code>'
+                 f'<span>{m.group(1)}</span></h3>', md(sec.get('experience', '')))
+
+    def head(title, tag):
+        return f'<div class="shrow"><h2 class="sh">{title}</h2><span class="stag">{tag}</span></div>'
     out = f'''<section class="hero wrap">
 <div class="htext">
 <p class="eyebrow">{html.escape(meta.get("eyebrow", ""))}</p>
@@ -255,12 +336,13 @@ def build_home(projects):
 </div>
 {f'<div class="himg"><img src="{hero_img}" alt=""></div>' if hero_img else ''}
 </section>
-<section class="wrap"><div class="stats">{stats}</div></section>
+<section class="wrap t-lab hstats"><div class="stats">{stats}</div></section>
 <section id="work" class="wrap"><div class="shrow"><h2 class="sh">Selected work</h2>{filt}</div>{grid}</section>
-<section id="timeline" class="wrap"><h2 class="sh">Timeline</h2>{timeline}</section>
-<section id="experience" class="wrap narrow prose"><h2 class="sh">Experience</h2>{md(sec.get("experience", ""))}</section>
-<section id="about" class="wrap narrow prose"><h2 class="sh">About</h2>{md(sec.get("about", ""))}</section>
-<section id="contact" class="wrap narrow prose"><h2 class="sh">Contact & elsewhere</h2>{md(sec.get("contact", ""))}</section>'''
+<section id="timeline" class="wrap hsec t-print">{head("Timeline", f";LAYER_COUNT:{len(tl)}")}{timeline}</section>
+<section id="experience" class="wrap narrow hsec t-code prose">{head("Experience", '$ git log --author="Ben Vrakas"')}<div class="gitlog">{exp}</div></section>
+<section id="about" class="wrap narrow hsec t-lab prose">{head("About", '<span class="elem"><sup>23</sup><b>V</b><sub>V-Labs</sub></span>')}
+<div class="about">{viz("lab", seed=23)}{md(sec.get("about", ""))}</div></section>
+<section id="contact" class="wrap narrow hsec t-pcb prose pinout">{head("Contact & elsewhere", "<b>J1</b><i></i>NET_CONTACT")}{md(sec.get("contact", ""))}</section>'''
     return page('Ben Vrakas · Mechanical design, electronics & software', out, '', meta.get('intro', ''), hero_img, 'home', '')
 
 

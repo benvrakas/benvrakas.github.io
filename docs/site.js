@@ -69,6 +69,6 @@
         }
       });
     }, { rootMargin: '-20% 0px -70% 0px' });
-    document.querySelectorAll('.prose h2[id]').forEach((h) => obs.observe(h));
+    document.querySelectorAll('.psec[id]').forEach((h) => obs.observe(h));
   }
 })();

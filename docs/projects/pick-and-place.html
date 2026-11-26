@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pick-and-Place Machine: Passive Spool Feeder · Ben Vrakas</title>
 <meta name="description" content="The first system of a DIY SMT pick-and-place machine: a fully passive, 3D-printable tape feeder driven by a single linear push from the machine, parametric across 8–24 mm tape widths.">
-<meta name="theme-color" content="#0e1013">
+<meta name="theme-color" content="#0a1220">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Ben Vrakas">
 <meta property="og:url" content="https://benvrakas.github.io/projects/pick-and-place.html">
@@ -17,22 +17,25 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="../themes.css">
 </head>
-<body class="proj">
+<body class="proj t-cad">
 <header class="top"><div class="wrap"><a class="brand" href="../index.html"><span class="mark">BV</span>Ben Vrakas</a><nav><a href="../index.html#work">Work</a><a href="../index.html#timeline">Timeline</a><a href="../index.html#experience">Experience</a><a href="../index.html#about">About</a><a href="../resume.html">Resume</a><a href="../index.html#contact">Contact</a><a class="gh" href="https://github.com/benvrakas">GitHub ↗</a></nav></div></header>
 <main>
 <div class="wrap playout" id="top">
-<aside class="side"><div class="sticky"><p class="sh2">On this page</p><ul class="toc"><li><a href="#top">Overview</a></li><li><a href="#requirements-that-shaped-the-feeder">Requirements that shaped the feeder</a></li><li><a href="#drawings-generated-from-code">Drawings generated from code</a></li></ul><p class="sh2">All projects</p><ul class="plist"><li><a href="smart-light-panels.html"><span>Modular Smart Light Panels</span><em>2026</em></a></li><li><a href="gobo-projector.html"><span>1000 W LED Gobo Projector</span><em>2025</em></a></li><li><a href="carbon-3d-pc.html"><span>Carbon 3D Modular PC Chassis</span><em>2017</em></a></li><li><a href="electric-longboards.html"><span>Electric Longboards</span><em>2016</em></a></li><li><a href="v-labs-ender-3.html"><span>V-Labs Ender 3 &amp; RRFarm</span><em>2023</em></a></li><li><a href="part-extraction.html"><span>FDM Part Extraction System (Micronics)</span><em>2023</em></a></li><li><a href="lunabotics.html"><span>UWRF Lunabotics Rover</span><em>2020</em></a></li><li><a href="beast-robotics.html"><span>BEAST Robotics: Suction End Effector</span><em>2017</em></a></li><li><a href="hypercube-evolution.html"><span>Custom 3D Printers: HyperCube Evolution &amp; RailCore</span><em>2014</em></a></li><li class=cur><a href="pick-and-place.html"><span>Pick-and-Place Machine: Passive Spool Feeder</span><em>2026</em></a></li><li><a href="satisfactory-mods.html"><span>Satisfactory Mods</span><em>2026</em></a></li><li><a href="etsy-displays.html"><span>3D-Printed Products for Etsy</span><em>2025</em></a></li><li><a href="small-designs.html"><span>Small Designs, Woodworking &amp; Published Models</span><em>2019</em></a></li><li><a href="early-work.html"><span>Early Work: Maker Faire, Clearwater, Rockets</span><em>2012</em></a></li></ul></div></aside>
+<aside class="side"><div class="sticky"><p class="sh2">On this page</p><ul class="toc"><li><a href="#top">Overview</a></li><li><a href="#requirements-that-shaped-the-feeder">Requirements that shaped the feeder</a></li><li><a href="#drawings-generated-from-code">Drawings generated from code</a></li></ul><p class="sh2">All projects</p><ul class="plist"><li><a href="smart-light-panels.html"><i class="tdot t-pcb"></i><span>Modular Smart Light Panels</span><em>2026</em></a></li><li><a href="gobo-projector.html"><i class="tdot t-pcb"></i><span>1000 W LED Gobo Projector</span><em>2025</em></a></li><li><a href="carbon-3d-pc.html"><i class="tdot t-print"></i><span>Carbon 3D Modular PC Chassis</span><em>2017</em></a></li><li><a href="electric-longboards.html"><i class="tdot t-pcb"></i><span>Electric Longboards</span><em>2016</em></a></li><li><a href="v-labs-ender-3.html"><i class="tdot t-print"></i><span>V-Labs Ender 3 &amp; RRFarm</span><em>2023</em></a></li><li><a href="part-extraction.html"><i class="tdot t-cad"></i><span>FDM Part Extraction System (Micronics)</span><em>2023</em></a></li><li><a href="lunabotics.html"><i class="tdot t-cad"></i><span>UWRF Lunabotics Rover</span><em>2020</em></a></li><li><a href="beast-robotics.html"><i class="tdot t-cad"></i><span>BEAST Robotics: Suction End Effector</span><em>2017</em></a></li><li><a href="hypercube-evolution.html"><i class="tdot t-print"></i><span>Custom 3D Printers: HyperCube Evolution &amp; RailCore</span><em>2014</em></a></li><li class=cur><a href="pick-and-place.html"><i class="tdot t-cad"></i><span>Pick-and-Place Machine: Passive Spool Feeder</span><em>2026</em></a></li><li><a href="satisfactory-mods.html"><i class="tdot t-code"></i><span>Satisfactory Mods</span><em>2026</em></a></li><li><a href="etsy-displays.html"><i class="tdot t-print"></i><span>3D-Printed Products for Etsy</span><em>2025</em></a></li><li><a href="small-designs.html"><i class="tdot t-cad"></i><span>Small Designs, Woodworking &amp; Published Models</span><em>2019</em></a></li><li><a href="early-work.html"><i class="tdot t-lab"></i><span>Early Work: Maker Faire, Clearwater, Rockets</span><em>2012</em></a></li></ul></div></aside>
 <article class="project">
+<header class="phead"><div class="phtext">
 <a class="back" href="../index.html#work">← All work</a>
-<p class="eyebrow">2026 · early stage</p>
+<p class="eyebrow">2026 · early stage <span class="tbadge">DWG</span></p>
 <h1>Pick-and-Place Machine: Passive Spool Feeder</h1>
 <p class="lede">The first system of a DIY SMT pick-and-place machine: a fully passive, 3D-printable tape feeder driven by a single linear push from the machine, parametric across 8–24 mm tape widths.</p>
 <ul class="chips"><li>Mechanism design</li><li>Parametric CAD</li><li>Python-generated drawings</li><li>3D printing</li><li>SMT</li></ul>
 
+</div><div class="viz" data-viz="cad" data-title="Pick-and-Place Machine: Passive Spool Feeder" data-years="2026 · early stage" data-tags="Mechanism design|Parametric CAD|Python-generated drawings" data-slug="pick-and-place" data-seed="73" aria-hidden="true"></div></header>
 <div class="phero"><img src="../media/pick-and-place/feeder-iso.jpg" alt="Pick-and-Place Machine: Passive Spool Feeder"></div>
-<div class="prose"><p>I'm designing a pick-and-place machine to assemble my own boards, like the <a href="smart-light-panels.html">light panel</a> and <a href="gobo-projector.html">projector</a> controllers. Each system gets a plain-text spec of numbered requirements and decisions before CAD starts. The first system is the tape feeder, now on its fifth design generation.</p>
-<h2 id="requirements-that-shaped-the-feeder">Requirements that shaped the feeder</h2>
+<div class="prose"><section class="psec t-cad"><p>I'm designing a pick-and-place machine to assemble my own boards, like the <a href="smart-light-panels.html">light panel</a> and <a href="gobo-projector.html">projector</a> controllers. Each system gets a plain-text spec of numbered requirements and decisions before CAD starts. The first system is the tape feeder, now on its fifth design generation.</p>
+</section><section class="psec t-cad" id="requirements-that-shaped-the-feeder"><div class="shead"><span class="stag">SECTION <b>A–A</b></span><h2>Requirements that shaped the feeder</h2></div>
 <ul>
 <li><strong>Completely passive:</strong> no motors or electronics in the feeder. One actuator on the machine pushes whichever feeder is selected.</li>
 <li><strong>One linear push does everything:</strong> a ~20 mm stroke is reduced inside the feeder (so slop is divided down) to advance the tape <strong>4 mm per stroke</strong>, and the same motion overdrives the <strong>cover-film peel wheels</strong> and take-up spool, with O-rings as slip clutches.</li>
@@ -42,11 +45,11 @@
 </ul>
 <div class="gallery"><figure><a href="../media/pick-and-place/feeder-iso.jpg" class="lb" data-cap="v5 feeder model · Nov 2026"><img src="../media/pick-and-place/feeder-iso_t.jpg" alt="v5 feeder model · Nov 2026" loading="lazy"></a><figcaption>v5 feeder model · Nov 2026</figcaption></figure><figure><a href="../media/pick-and-place/feeder-yoke.jpg" class="lb" data-cap="Drive yoke and push arm · Nov 2026"><img src="../media/pick-and-place/feeder-yoke_t.jpg" alt="Drive yoke and push arm · Nov 2026" loading="lazy"></a><figcaption>Drive yoke and push arm · Nov 2026</figcaption></figure><figure><a href="../media/pick-and-place/mechanism-planes.jpg" class="lb" data-cap="Mechanism planes: lever and pawl, main wheel · Nov 2026"><img src="../media/pick-and-place/mechanism-planes_t.jpg" alt="Mechanism planes: lever and pawl, main wheel · Nov 2026" loading="lazy"></a><figcaption>Mechanism planes: lever and pawl, main wheel · Nov 2026</figcaption></figure></div>
 
-<h2 id="drawings-generated-from-code">Drawings generated from code</h2>
+</section><section class="psec t-code own" id="drawings-generated-from-code"><div class="shead"><span class="stag"><b>def</b> <em>drawings_generated</em>():</span><h2>Drawings generated from code</h2></div>
 <p>Every drawing sheet is generated by a Python script from a single parameter set, with clearance checks. The same script produces sheets for all four tape widths, and its parameter file is the input for CAD.</p>
 <div class="gallery"><figure><a href="../media/pick-and-place/sheet-v4.jpg" class="lb" data-cap="Feeder drawing sheet, 8 mm tape (v4) · Nov 2026"><img src="../media/pick-and-place/sheet-v4_t.jpg" alt="Feeder drawing sheet, 8 mm tape (v4) · Nov 2026" loading="lazy"></a><figcaption>Feeder drawing sheet, 8 mm tape (v4) · Nov 2026</figcaption></figure><figure><a href="../media/pick-and-place/bank-v3.jpg" class="lb" data-cap="Feeder bank with select and drive motors (v3) · Nov 2026"><img src="../media/pick-and-place/bank-v3_t.jpg" alt="Feeder bank with select and drive motors (v3) · Nov 2026" loading="lazy"></a><figcaption>Feeder bank with select and drive motors (v3) · Nov 2026</figcaption></figure><figure><a href="../media/pick-and-place/system-v3.jpg" class="lb" data-cap="System sketch: reel rack, feeder and work plate · Nov 2026"><img src="../media/pick-and-place/system-v3_t.jpg" alt="System sketch: reel rack, feeder and work plate · Nov 2026" loading="lazy"></a><figcaption>System sketch: reel rack, feeder and work plate · Nov 2026</figcaption></figure></div>
 
-<p><strong>Status:</strong> feeder v5 is in its second CAD round, the feeder-bank sheet is awaiting review, and the gantry, pick head, vision and electronics haven't started yet.</p></div>
+<p><strong>Status:</strong> feeder v5 is in its second CAD round, the feeder-bank sheet is awaiting review, and the gantry, pick head, vision and electronics haven't started yet.</p></section></div>
 <nav class="pager"><a href="hypercube-evolution.html">← Custom 3D Printers: HyperCube Evolution &amp; RailCore</a><a href="satisfactory-mods.html">Satisfactory Mods →</a></nav>
 </article>
 </div>
@@ -55,5 +58,6 @@
 <span><a href="https://github.com/benvrakas">GitHub</a> · <a href="https://www.printables.com/@VLabs_256532">Printables</a> · <a href="https://www.thingiverse.com/benvrakas/designs">Thingiverse</a> · <a href="https://ficsit.app/user/benvrakas">ficsit.app</a> · <a href="https://www.youtube.com/channel/UC1nUGgfhgWf4mYUwQ9nH5FQ">YouTube</a></span></div></footer>
 <div id="lightbox" hidden><button class="lbx" aria-label="Close">×</button><button class="lbp" aria-label="Previous">‹</button><figure><img alt=""><figcaption></figcaption></figure><button class="lbn" aria-label="Next">›</button></div>
 <script src="../site.js" defer></script>
+<script src="../viz.js" defer></script>
 </body>
 </html>
