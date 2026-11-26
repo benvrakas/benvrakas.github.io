@@ -4,32 +4,33 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>V-Labs Ender 3 &amp; RRFarm · Ben Vrakas</title>
-<meta name="description" content="A conversion kit that makes the world&#x27;s most common budget 3D printer far more reliable and about 3× faster, plus a web app for running a farm of them.">
+<meta name="description" content="A conversion kit that makes the world&#x27;s most common budget 3D printer far more reliable and about 3× faster, plus a web app for running my six-printer farm.">
+<meta name="theme-color" content="#0e1013">
 <meta property="og:title" content="V-Labs Ender 3 &amp; RRFarm · Ben Vrakas">
-<meta property="og:description" content="A conversion kit that makes the world&#x27;s most common budget 3D printer far more reliable and about 3× faster, plus a web app for running a farm of them.">
+<meta property="og:description" content="A conversion kit that makes the world&#x27;s most common budget 3D printer far more reliable and about 3× faster, plus a web app for running my six-printer farm.">
 <meta property="og:image" content="https://benvrakas.github.io/media/v-labs-ender-3/machine-front.jpg">
 <link rel="icon" href="../favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../style.css">
 </head>
-<body>
-<header class="top"><div class="wrap"><a class="brand" href="../index.html"><span class="mark">BV</span>Ben Vrakas</a><nav><a href="../index.html#work">Work</a><a href="../index.html#experience">Experience</a><a href="../index.html#about">About</a><a href="https://github.com/benvrakas">GitHub</a></nav></div></header>
+<body class="proj">
+<header class="top"><div class="wrap"><a class="brand" href="../index.html"><span class="mark">BV</span>Ben Vrakas</a><nav><a href="../index.html#work">Work</a><a href="../index.html#timeline">Timeline</a><a href="../index.html#experience">Experience</a><a href="../index.html#about">About</a><a href="../resume.html">Resume</a><a href="../index.html#contact">Contact</a><a class="gh" href="https://github.com/benvrakas">GitHub ↗</a></nav></div></header>
 <main>
-<article class="project wrap narrow">
+<div class="wrap playout" id="top">
+<aside class="side"><div class="sticky"><p class="sh2">On this page</p><ul class="toc"><li><a href="#top">Overview</a></li><li><a href="#what-changes-from-stock">What changes from stock</a></li><li><a href="#rrfarm-managing-the-fleet">RRFarm: managing the fleet</a></li></ul><p class="sh2">All projects</p><ul class="plist"><li><a href="smart-light-panels.html"><span>Modular Smart Light Panels</span><em>2026</em></a></li><li><a href="gobo-projector.html"><span>1000 W LED Gobo Projector</span><em>2025</em></a></li><li><a href="carbon-3d-pc.html"><span>Carbon 3D Modular PC Chassis</span><em>2017</em></a></li><li><a href="satisfactory-mods.html"><span>Satisfactory Mods</span><em>2026</em></a></li><li><a href="electric-longboards.html"><span>Electric Longboards</span><em>2016</em></a></li><li class=cur><a href="v-labs-ender-3.html"><span>V-Labs Ender 3 &amp; RRFarm</span><em>2023</em></a></li><li><a href="part-extraction.html"><span>FDM Part Extraction System (Micronics)</span><em>2023</em></a></li><li><a href="lunabotics.html"><span>UWRF Lunabotics Rover</span><em>2020</em></a></li><li><a href="beast-robotics.html"><span>BEAST Robotics: Suction End Effector</span><em>2017</em></a></li><li><a href="hypercube-evolution.html"><span>Custom 3D Printers: HyperCube Evolution &amp; RailCore</span><em>2014</em></a></li><li><a href="etsy-displays.html"><span>3D-Printed Products for Etsy</span><em>2025</em></a></li><li><a href="small-designs.html"><span>Small Designs, Woodworking &amp; Published Models</span><em>2019</em></a></li><li><a href="early-work.html"><span>Early Work: Maker Faire, Clearwater, Rockets</span><em>2012</em></a></li></ul></div></aside>
+<article class="project">
 <a class="back" href="../index.html#work">← All work</a>
 <p class="eyebrow">2023 – 2026</p>
 <h1>V-Labs Ender 3 &amp; RRFarm</h1>
-<p class="lede">A conversion kit that makes the world&#x27;s most common budget 3D printer far more reliable and about 3× faster, plus a web app for running a farm of them.</p>
-<ul class="chips"><li>Autodesk Inventor</li><li>RepRapFirmware</li><li>Python</li><li>FastAPI</li><li>3D printing</li><li>Open source</li></ul>
+<p class="lede">A conversion kit that makes the world&#x27;s most common budget 3D printer far more reliable and about 3× faster, plus a web app for running my six-printer farm.</p>
+<ul class="chips"><li>Autodesk Inventor</li><li>RepRapFirmware</li><li>Python</li><li>FastAPI</li><li>Print farm</li><li>Open source</li></ul>
 <div class="links"><a class="btn" href="https://www.printables.com/model/591767-v-labs-ender-3">Printables ↗</a><a class="btn" href="https://github.com/benvrakas/V-Labs-Ender-3">Repository ↗</a></div>
-</article>
-<div class="wrap"><div class="phero"><img src="../media/v-labs-ender-3/machine-front.jpg" alt="V-Labs Ender 3 &amp; RRFarm"></div></div>
-<article class="project wrap narrow prose">
-<p>The Creality Ender 3 is the most widely produced (and most often thrown away) 3D printer. It's cheap, but you lose a lot of time and filament fighting the first layer. This kit turns it into a reliable, fast, accurate machine running <strong>RepRapFirmware over Wi-Fi</strong> on a Fly E3 board, with no Raspberry Pi or Klipper needed. It's open source, rated 4.5★ on Printables, and I'm using it to help friends build a print farm from recycled machines.</p>
-<div class="gallery"><figure><a href="../media/v-labs-ender-3/machine.jpg" class="lb"><img src="../media/v-labs-ender-3/machine_t.jpg" alt="Full machine" loading="lazy"></a><figcaption>Full machine</figcaption></figure><figure><a href="../media/v-labs-ender-3/printhead-closeup.jpg" class="lb"><img src="../media/v-labs-ender-3/printhead-closeup_t.jpg" alt="Printhead with cable chain" loading="lazy"></a><figcaption>Printhead with cable chain</figcaption></figure><figure><a href="../media/v-labs-ender-3/fan-duct.jpg" class="lb"><img src="../media/v-labs-ender-3/fan-duct_t.jpg" alt="Part-cooling fan duct" loading="lazy"></a><figcaption>Part-cooling fan duct</figcaption></figure></div>
+<div class="phero"><img src="../media/v-labs-ender-3/machine-front.jpg" alt="V-Labs Ender 3 &amp; RRFarm"></div>
+<div class="prose"><p>The Creality Ender 3 is the most widely produced (and most often thrown away) 3D printer. It's cheap, but you lose a lot of time and filament fighting the first layer. This kit turns it into a reliable, fast, accurate machine running <strong>RepRapFirmware over Wi-Fi</strong> on a Fly E3 board, with no Raspberry Pi or Klipper needed. It's open source, rated 4.5★ on Printables, and runs my <strong>six-printer farm</strong>, which prints products for <a href="etsy-displays.html">Etsy</a> as well as my own projects.</p>
+<div class="gallery"><figure><a href="../media/v-labs-ender-3/machine.jpg" class="lb" data-cap="Full machine"><img src="../media/v-labs-ender-3/machine_t.jpg" alt="Full machine" loading="lazy"></a><figcaption>Full machine</figcaption></figure><figure><a href="../media/v-labs-ender-3/printhead-closeup.jpg" class="lb" data-cap="Printhead with cable chain"><img src="../media/v-labs-ender-3/printhead-closeup_t.jpg" alt="Printhead with cable chain" loading="lazy"></a><figcaption>Printhead with cable chain</figcaption></figure><figure><a href="../media/v-labs-ender-3/fan-duct.jpg" class="lb" data-cap="Part-cooling fan duct"><img src="../media/v-labs-ender-3/fan-duct_t.jpg" alt="Part-cooling fan duct" loading="lazy"></a><figcaption>Part-cooling fan duct</figcaption></figure></div>
 
-<h2>What changes from stock</h2>
+<h2 id="what-changes-from-stock">What changes from stock</h2>
 <ul>
 <li><strong>Printhead:</strong> a direct-drive dual-gear extruder that reuses the stock hotend and fan, a 5015 part-cooling fan and duct, and an inductive probe or BLTouch for mesh compensation.</li>
 <li><strong>Bed:</strong> TPU springs and high-friction knobs that don't drift with vibration.</li>
@@ -38,21 +39,23 @@
 <li><strong>Filament runout sensor.</strong></li>
 </ul>
 <p>The repository ships the full Inventor project, print-ready STLs, SD-card-ready firmware packages for two boards, OrcaSlicer presets and a full bill of materials.</p>
-<div class="gallery"><figure><a href="../media/v-labs-ender-3/printhead-v1.jpg" class="lb"><img src="../media/v-labs-ender-3/printhead-v1_t.jpg" alt="Printhead development" loading="lazy"></a><figcaption>Printhead development</figcaption></figure><figure><a href="../media/v-labs-ender-3/printhead-v21.jpg" class="lb"><img src="../media/v-labs-ender-3/printhead-v21_t.jpg" alt="Printhead v2.1 body" loading="lazy"></a><figcaption>Printhead v2.1 body</figcaption></figure><figure><a href="../media/v-labs-ender-3/printhead-section.jpg" class="lb"><img src="../media/v-labs-ender-3/printhead-section_t.jpg" alt="Printhead with hotend" loading="lazy"></a><figcaption>Printhead with hotend</figcaption></figure></div>
+<div class="gallery"><figure><a href="../media/v-labs-ender-3/printhead-v1.jpg" class="lb" data-cap="Printhead development"><img src="../media/v-labs-ender-3/printhead-v1_t.jpg" alt="Printhead development" loading="lazy"></a><figcaption>Printhead development</figcaption></figure><figure><a href="../media/v-labs-ender-3/printhead-v21.jpg" class="lb" data-cap="Printhead v2.1 body"><img src="../media/v-labs-ender-3/printhead-v21_t.jpg" alt="Printhead v2.1 body" loading="lazy"></a><figcaption>Printhead v2.1 body</figcaption></figure><figure><a href="../media/v-labs-ender-3/printhead-section.jpg" class="lb" data-cap="Printhead with hotend"><img src="../media/v-labs-ender-3/printhead-section_t.jpg" alt="Printhead with hotend" loading="lazy"></a><figcaption>Printhead with hotend</figcaption></figure></div>
 
-<h2>RRFarm: managing the fleet</h2>
-<p>A small Python web app (FastAPI) for running several of these printers:</p>
+<h2 id="rrfarm-managing-the-fleet">RRFarm: managing the fleet</h2>
+<p>A small Python web app (FastAPI) for running the farm:</p>
 <ul>
 <li><strong>Dashboard</strong> with the live status of every printer</li>
 <li><strong>Push</strong> macros or files to many printers at once</li>
 <li><strong>Firmware updates</strong> from a versioned package. It checks the printer is idle and the package matches the board, uploads with CRC checks and retries, flashes the main and Wi-Fi firmware, waits for the reboot and confirms the new versions. Per-printer config is never overwritten.</li>
 </ul>
-<nav class="pager"><a href="electric-longboards.html">← Electric Longboards</a><a href="satisfactory-mods.html">Satisfactory Mods →</a></nav>
+<figure class="yt"><button class="yt-lite" data-id="5zqDwToLOdk" aria-label="Play video: Printing at speed" style="background-image:url(https://i.ytimg.com/vi/5zqDwToLOdk/hqdefault.jpg)"><span></span></button><figcaption>Printing at speed</figcaption></figure></div>
+<nav class="pager"><a href="electric-longboards.html">← Electric Longboards</a><a href="part-extraction.html">FDM Part Extraction System (Micronics) →</a></nav>
 </article>
+</div>
 </main>
-<footer class="foot"><div class="wrap"><span>© 2026 Ben Vrakas</span>
-<span><a href="https://github.com/benvrakas">GitHub</a> · <a href="https://www.printables.com/@VLabs_256532">Printables</a> · <a href="https://www.thingiverse.com/benvrakas/designs">Thingiverse</a></span></div></footer>
-<div id="lightbox" hidden><img alt=""><button aria-label="Close">×</button></div>
+<footer class="foot"><div class="wrap"><span>© 2026 Ben Vrakas · V-Labs</span>
+<span><a href="https://github.com/benvrakas">GitHub</a> · <a href="https://www.printables.com/@VLabs_256532">Printables</a> · <a href="https://www.thingiverse.com/benvrakas/designs">Thingiverse</a> · <a href="https://ficsit.app/user/benvrakas">ficsit.app</a> · <a href="https://www.youtube.com/channel/UC1nUGgfhgWf4mYUwQ9nH5FQ">YouTube</a></span></div></footer>
+<div id="lightbox" hidden><button class="lbx" aria-label="Close">×</button><button class="lbp" aria-label="Previous">‹</button><figure><img alt=""><figcaption></figcaption></figure><button class="lbn" aria-label="Next">›</button></div>
 <script src="../site.js" defer></script>
 </body>
 </html>

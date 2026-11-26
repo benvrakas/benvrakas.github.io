@@ -1,0 +1,32 @@
+/* Resume: paper sheet on screen, one Letter page in print. */
+.rtools { display: flex; gap: 8px; justify-content: center; margin: 28px auto 18px; }
+.paper {
+  width: min(8.5in, 100% - 32px); margin: 0 auto; background: #fff; color: #1b1d21;
+  padding: 0.5in 0.55in; border-radius: 6px; box-shadow: 0 10px 40px rgba(0,0,0,.45);
+  font: 9.6pt/1.38 Inter, system-ui, sans-serif;
+}
+.paper a { color: #0b5cad; }
+.rhead { border-bottom: 2px solid #1b1d21; padding-bottom: 6px; margin-bottom: 6px; }
+.paper h1 { font-size: 21pt; margin: 0; letter-spacing: -.01em; color: #111; }
+.rtitle { margin: 1px 0 3px; font: 600 9pt "JetBrains Mono", monospace; color: #b36b00; text-transform: uppercase; letter-spacing: .04em; }
+.rcontact { margin: 0; font-size: 9pt; color: #333; }
+.rcontact i { font-style: normal; color: #999; margin: 0 3px; }
+.paper h2 { font: 700 9.5pt Inter, sans-serif; text-transform: uppercase; letter-spacing: .08em; color: #b36b00;
+  margin: 9px 0 3px; border-bottom: 1px solid #ddd; padding-bottom: 1px; }
+.paper h3 { font-size: 9.8pt; margin: 6px 0 1px; display: flex; justify-content: space-between; gap: 10px; color: #111; }
+.paper h3 span { font-weight: 500; color: #555; white-space: nowrap; font-size: 9pt; }
+.paper p { margin: 2px 0; }
+.paper ul { margin: 1px 0 2px; padding-left: 15px; }
+.paper li { margin: 1px 0; color: #1b1d21; }
+.paper strong { color: #000; }
+@media (max-width: 640px) { .paper { padding: 20px 18px; font-size: 10pt; } .paper h3 { flex-direction: column; gap: 0; } }
+
+@page { size: Letter; margin: 0; }
+@media print {
+  body { background: #fff !important; }
+  .top, .foot, .rtools, #lightbox { display: none !important; }
+  main { margin: 0; }
+  .paper { width: 8.5in; box-shadow: none; border-radius: 0; margin: 0; padding: 0.36in 0.48in; font-size: 9.15pt; line-height: 1.33; }
+  .paper h2 { margin: 7px 0 2px; }
+  .paper h3 { margin: 4px 0 0; }
+}

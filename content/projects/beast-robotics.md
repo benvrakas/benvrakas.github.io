@@ -1,7 +1,8 @@
 ---
 title: BEAST Robotics: Suction End Effector
 years: 2017 – 2019
-order: 7
+order: 9
+areas: mechanical, printing
 tags: FIRST Robotics, Autodesk Inventor, Molding, PETG, Award
 summary: Mechanical lead for the end-effector team on FIRST team 2202. I designed a suction-cup effector that captured both game pieces with one system, and won an engineering ingenuity award.
 hero: competition
@@ -31,3 +32,6 @@ Our team was the **only one of 300+ worldwide** to capture both game objects wit
 award | With the suction effector at competition
 robot | The 2019 robot
 :::
+
+:::youtube hbuFDKa3emc | Team 2202: 2019 Miami Valley Regional recap
+:::youtube EEnPsXRpHWw | Climb test

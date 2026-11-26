@@ -1,20 +1,23 @@
 ---
-title: HyperCube Evolution Printer
-years: 2017 – 2019
-order: 8
+title: Custom 3D Printers: HyperCube Evolution & RailCore
+years: 2014 – 2019
+order: 10
+areas: printing, mechanical, electrical
 tags: CoreXY, RepRapFirmware, Duet, Printhead design, Open source
-summary: A CoreXY 3D printer I built and reworked, with my first RepRapFirmware setup and a balanced direct-drive printhead I designed and published.
+summary: The printers behind everything else, from a PrintrBot at 14 to a HyperCube Evolution with my own balanced direct-drive printhead and a RailCore I built.
 hero: rebuild-2019
-links: Printhead files (Thingiverse) | https://www.thingiverse.com/thing:5377398
+links: Printhead files (Thingiverse) | https://www.thingiverse.com/thing:5377398 ; RailCore upgrades (Printables) | https://www.printables.com/model/591660-railcore-upgrades-fan-shroud-tension-blocks-hotend
 ---
-The HyperCube Evolution (HEVO) is the open-source successor to the HyperCube: a CoreXY belt system built around metric T-slot extrusion.
+My first printer was a **PrintrBot Simple** at 14, and I designed most of my early upgrades for it. Since then I've built and reworked a series of machines: a **HyperCube Evolution**, a **RailCore** (with my published upgrades: fan shroud, tension blocks and hotend mount), and the [V-Labs Ender 3](v-labs-ender-3.html) farm.
 
-The recommended controller was a RAMPS board with cheap, loud stepper drivers. I used a **Duet WiFi running RepRapFirmware** instead. That was my first RRF machine, in 2017, and RRF has run my printers ever since, up to the [V-Labs Ender 3](v-labs-ender-3.html).
+## HyperCube Evolution
+
+The HyperCube Evolution (HEVO) is the open-source successor to the HyperCube: a CoreXY belt system built around metric T-slot extrusion. The recommended controller was a RAMPS board with cheap, loud stepper drivers. I used a **Duet WiFi running RepRapFirmware** instead. That was my first RRF machine, in 2017, and RRF has run my printers ever since.
 
 :::gallery
 build-2018 | First build
 duet-wiring | Duet WiFi electronics
-rebuild-2019 | 2019 rebuild
+rebuild-2019 | Rebuild
 :::
 
 ## Balanced direct-drive printhead

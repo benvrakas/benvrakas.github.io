@@ -1,29 +1,41 @@
 ---
 title: Early Work: Maker Faire, Clearwater, Rockets
 years: 2012 – 2017
-order: 9
+order: 13
+areas: fabrication, mechanical, printing
 tags: Maker Faire, Teaching, Laser cutting, Water cooling, High-power rocketry, E-bike
-summary: Where it started: a Vrakas Labs booth and 3D-modeling seminars at Maker Faire Milwaukee, a transparent water-cooled PC, high-power rockets and a DIY e-bike.
+summary: Where it started: woodshop as a kid, a Vrakas Labs booth and 3D-modeling seminars at Maker Faire Milwaukee, a transparent water-cooled PC that Nvidia called "great work", high-power rockets and a DIY e-bike.
 hero: makerfaire-2015
 ---
+## Starting young
+
+Woodshop, clamps and cardboard robots. Most of what came later started here.
+
+:::gallery
+young-robot | An early cardboard-and-Lego robot
+young-router | At the router table
+young-planer | Planing stock
+young-clamp | Glue-up
+:::
+
 ## Maker Faire Milwaukee (2012–2016)
 
 Vrakas Labs had a booth at Maker Faire Milwaukee every year from 2012 to 2016, showing printers, PCs and projects. I also gave public seminars on 3D modeling in Autodesk Inventor.
 
 :::gallery
-makerfaire-2015 | At the booth, 2015
-makerfaire-2014 | The 2014 booth
+makerfaire-2015 | At the booth
+makerfaire-2014 | The booth
 makerfaire-seminar | Teaching a 3D-modeling seminar
 :::
 
-## Project Clearwater (2015–2016)
+## Project Clearwater (2014–2016)
 
-Clearwater was a custom PC: a fully transparent case with water cooling, built from **3D-printed joints and laser-cut acrylic panels**. Its look later caught AMD's eye and led to the sponsored [Carbon 3D chassis](carbon-3d-pc.html).
+Clearwater was my second custom PC case and the first to use 3D printing: a fully transparent, water-cooled case built from **3D-printed joints and laser-cut acrylic panels**. Nvidia commented "great work" on it, and it later caught AMD's eye, which led to the sponsored [Carbon 3D chassis](carbon-3d-pc.html).
 
 :::gallery
 clearwater | Project Clearwater
 clearwater-2 | Printed corner joints and acrylic panels
-makerfaire-2016 | At Maker Faire 2016
+makerfaire-2016 | At Maker Faire
 :::
 
 :::gallery

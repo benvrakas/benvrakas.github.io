@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Resume · Ben Vrakas</title>
+<meta name="description" content="Resume of Ben Vrakas">
+<meta name="theme-color" content="#0e1013">
+<meta property="og:title" content="Resume · Ben Vrakas">
+<meta property="og:description" content="Resume of Ben Vrakas">
+
+<link rel="icon" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="resume.css">
+</head>
+<body class="resume">
+<header class="top"><div class="wrap"><a class="brand" href="index.html"><span class="mark">BV</span>Ben Vrakas</a><nav><a href="index.html#work">Work</a><a href="index.html#timeline">Timeline</a><a href="index.html#experience">Experience</a><a href="index.html#about">About</a><a href="resume.html">Resume</a><a href="index.html#contact">Contact</a><a class="gh" href="https://github.com/benvrakas">GitHub ↗</a></nav></div></header>
+<main>
+<div class="rtools wrap"><a class="btn" href="Ben_Vrakas_Resume.pdf">Download PDF ↓</a><a class="btn" href="index.html#work">See the projects →</a></div><div class="paper">
+<header class="rhead"><h1>Ben Vrakas</h1><p class="rtitle">Mechanical Design · Electronics · Embedded &amp; Software</p>
+<p class="rcontact">Madison, WI <i>·</i> 414-551-8244 <i>·</i> <a href="mailto:benvrakas@gmail.com">benvrakas@gmail.com</a> <i>·</i> <a href="https://benvrakas.github.io">benvrakas.github.io</a> <i>·</i> <a href="https://github.com/benvrakas">github.com/benvrakas</a></p></header>
+<h2 id="summary">Summary</h2>
+<p>Hands-on design engineer (10+ years in Autodesk Inventor, CSWA/CSWP with perfect scores) who takes products from parametric CAD through PCBs, firmware and fabrication, from startup prototypes (acquired by Formlabs) to a 1000 W liquid-cooled LED projector and C++ software with ~19,500 downloads.</p>
+<h2 id="skills">Skills</h2>
+<ul>
+<li><strong>CAD &amp; analysis:</strong> Autodesk Inventor (10+ yrs, spreadsheet-driven parametric models), SOLIDWORKS (CSWP), FEA and modal analysis, Blender rendering, DFM for FDM, SLS, sheet metal, CNC and injection molding</li>
+<li><strong>Electronics:</strong> KiCad (4-layer boards), power electronics (Mean Well PMBus/CAN supplies, 1000 W LED drive), Li-ion packs (spot welding, BMS), VESC/BLDC drive, CAN bus, sensors, harnessing</li>
+<li><strong>Firmware &amp; software:</strong> embedded C++ (SAMD51, ESP32, PlatformIO, ESP-IDF), state-machine and fault-handling design, C++/Unreal Engine (multiplayer replication), Python (FastAPI tools), G-code and RepRapFirmware</li>
+<li><strong>Fabrication:</strong> FDM print-farm production, SLS, laser cutting, woodworking, custom water cooling, soldering and rework, rapid prototyping</li>
+</ul>
+<h2 id="experience">Experience</h2>
+<h3 id="independent-engineer-v-labs-madison-wi-jun-2024-present">Independent Engineer · V-Labs · Madison, WI <span>Jun 2024 – Present</span></h3>
+<ul>
+<li>Designing a <strong>1000 W liquid-cooled LED gobo projector</strong>: 4-layer KiCad controller (SAMD51 + CAN/PMBus), safety-latched firmware state machine with per-channel fault monitoring, printed optics housing and frame.</li>
+<li>Architected <strong>self-configuring modular light panels</strong> (hex/square/triangle) with spring-contact seam bridges, CAN networking and room-scale 3D effects. Mechanical prototypes printed; full spec with decision records.</li>
+<li>Shipped <strong>13 C++ mods for Satisfactory</strong> (Unreal Engine), with <strong>~19,500 downloads in two months</strong>, including space-time train scheduling and a server networking fix.</li>
+<li>Designed and produced 3D-printed products on a <strong>6-printer RepRapFirmware farm</strong> with a self-written Python fleet manager: <strong>141 Etsy sales, 5.0★</strong>.</li>
+</ul>
+<h3 id="contract-design-engineer-micronics-llc-middleton-wi-jul-2023-jun-2024">Contract Design Engineer · Micronics LLC · Middleton, WI <span>Jul 2023 – Jun 2024</span></h3>
+<ul>
+<li>One of three engineers at a hardware startup, acquired by <strong>Formlabs</strong>. Designed and built product prototypes from sheet metal, FDM and SLS parts and off-the-shelf components.</li>
+<li>Built an <strong>automated part-extraction system</strong> for enclosed FDM printers (stepper-driven linear axis with its own controller) to enable unattended back-to-back printing.</li>
+<li>Worked on systems automation and PLCs, G-code scripting, FEA and modal analysis, and sourced and tested hardware from global suppliers on rapid design-test cycles.</li>
+</ul>
+<h3 id="student-intern-space-science-institute-2017-2019">Student Intern · Space Science Institute <span>2017 – 2019</span></h3>
+<ul>
+<li>Designed and built imaging targets and camera mounts for testing and calibrating software for the <strong>Mastcam-Z</strong> instrument on NASA's Mars 2020 rover.</li>
+</ul>
+<h3 id="freelance-cad-custom-builds-2011-2019-ongoing-commissions">Freelance CAD &amp; Custom Builds <span>2011 – 2019 · ongoing commissions</span></h3>
+<ul>
+<li>Designed injection-molded components and replacement parts for clients (Fiverr and local) and provided 3D printing and prototyping services.</li>
+<li>Created the <strong>Carbon 3D</strong> parametric carbon-tube PC chassis: an AMD-sponsored build featured on AMD's social media, five generations since, including commissioned builds.</li>
+</ul>
+<h2 id="selected-projects">Selected Projects</h2>
+<ul>
+<li><strong>UWRF Lunabotics (NASA)</strong>: co-founded the team. Designed ODrive closed-loop hub-motor wheels, a gas-spring wheel deployment linkage, a 4 kW bucket-chain excavator and a printed planetary gearbox.</li>
+<li><strong>Electric longboards</strong>: VESC boards with printed enclosures and a self-built 10S3P spot-welded pack (34 mph, 4.4 kW), plus a commissioned 12S4P build.</li>
+<li><strong>FIRST Robotics team 2202</strong>: end-effector mechanical lead. Designed a molded suction effector that was the only single-system solution among 300+ teams. <strong>Engineering ingenuity award</strong>, World Championship.</li>
+</ul>
+<h2 id="education-certifications">Education &amp; Certifications</h2>
+<ul>
+<li><strong>Madison Area Technical College</strong>, Mechanical Design (in progress, expected 2027–28)</li>
+<li><strong>UW–River Falls</strong>, Applied Physics + Mechanical Engineering dual-degree program (2 years completed)</li>
+<li><strong>CSWA</strong> and <strong>CSWP</strong> (SOLIDWORKS Associate / Professional), perfect scores · Maker Faire Milwaukee presenter, 2012–16</li>
+</ul>
+</div>
+</main>
+<footer class="foot"><div class="wrap"><span>© 2026 Ben Vrakas · V-Labs</span>
+<span><a href="https://github.com/benvrakas">GitHub</a> · <a href="https://www.printables.com/@VLabs_256532">Printables</a> · <a href="https://www.thingiverse.com/benvrakas/designs">Thingiverse</a> · <a href="https://ficsit.app/user/benvrakas">ficsit.app</a> · <a href="https://www.youtube.com/channel/UC1nUGgfhgWf4mYUwQ9nH5FQ">YouTube</a></span></div></footer>
+<div id="lightbox" hidden><button class="lbx" aria-label="Close">×</button><button class="lbp" aria-label="Previous">‹</button><figure><img alt=""><figcaption></figcaption></figure><button class="lbn" aria-label="Next">›</button></div>
+<script src="site.js" defer></script>
+</body>
+</html>
