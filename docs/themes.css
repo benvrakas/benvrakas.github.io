@@ -6,37 +6,42 @@
    ====================================================================== */
 :root { --tex: none; --ts: auto; --str: #ecc48d; --fn: #82aaff; }
 .t-print {
+  --motif: url("bg/print.svg");
   --bg: #100e0c; --bg2: #17130f; --card: #1b1713; --line: #302922; --muted: #a89d91;
   --accent: #ff8f3a; --accent2: #ffd166;
   --tex: radial-gradient(1100px 420px at 75% -120px, rgba(255, 143, 58, .09), transparent 70%),
-         repeating-linear-gradient(180deg, rgba(255, 255, 255, .03) 0 1px, transparent 1px 3px, rgba(0, 0, 0, .3) 3px 4px);
+         repeating-linear-gradient(180deg, rgba(255, 255, 255, .018) 0 1px, transparent 1px 3px, rgba(0, 0, 0, .18) 3px 4px);
   --ts: auto, auto;
 }
 .t-pcb {
+  --motif: url("bg/pcb.svg");
   --bg: #08110d; --bg2: #0c1813; --card: #0f1d17; --line: #1e3b2e; --muted: #95ab9e;
   --accent: #e0a458; --accent2: #e8efe9;
   --tex: radial-gradient(1100px 420px at 75% -120px, rgba(224, 164, 88, .08), transparent 70%),
-         url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' fill='none' stroke='%23e0a458' stroke-opacity='.11' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M0 20h30l20 20h30l20-20h20M0 76h44l12 12h20l12-12h32M0 104h60l8-8h20l8 8h24M64 40v12M30 76v-14'/%3E%3Ccircle cx='64' cy='56' r='3.5'/%3E%3Ccircle cx='30' cy='58' r='3.5'/%3E%3Crect x='92' y='50' width='6' height='5' rx='1'/%3E%3Crect x='104' y='50' width='6' height='5' rx='1'/%3E%3C/svg%3E");
+         url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' fill='none' stroke='%23e0a458' stroke-opacity='.05' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M0 20h30l20 20h30l20-20h20M0 76h44l12 12h20l12-12h32M0 104h60l8-8h20l8 8h24M64 40v12M30 76v-14'/%3E%3Ccircle cx='64' cy='56' r='3.5'/%3E%3Ccircle cx='30' cy='58' r='3.5'/%3E%3Crect x='92' y='50' width='6' height='5' rx='1'/%3E%3Crect x='104' y='50' width='6' height='5' rx='1'/%3E%3C/svg%3E");
   --ts: auto, 120px 120px;
 }
 .t-code {
+  --motif: url("bg/code.svg");
   --bg: #0d1117; --bg2: #121820; --card: #151c25; --line: #252e3a; --muted: #8d99a8;
   --accent: #c792ea; --accent2: #7fdbca;
   --tex: radial-gradient(1100px 420px at 75% -120px, rgba(199, 146, 234, .09), transparent 70%);
   --ts: auto;
 }
 .t-lab {
+  --motif: url("bg/lab.svg");
   --bg: #0c0d16; --bg2: #121424; --card: #151829; --line: #282c47; --muted: #9ca2bb;
   --accent: #5ee6c8; --accent2: #b494ff;
   --tex: radial-gradient(1100px 420px at 75% -120px, rgba(94, 230, 200, .07), transparent 70%),
-         url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='42' height='24.249' fill='none' stroke='%235ee6c8' stroke-opacity='.075' stroke-width='1.2'%3E%3Cpath d='M0 12.124L7 0H21L28 12.124L21 24.249H7Z M28 12.124H42'/%3E%3C/svg%3E");
+         url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='42' height='24.249' fill='none' stroke='%235ee6c8' stroke-opacity='.045' stroke-width='1.2'%3E%3Cpath d='M0 12.124L7 0H21L28 12.124L21 24.249H7Z M28 12.124H42'/%3E%3C/svg%3E");
   --ts: auto, 42px 24.249px;
 }
 .t-cad {
+  --motif: url("bg/cad.svg");
   --bg: #0a1220; --bg2: #0e192b; --card: #111e33; --line: #213354; --muted: #91a5c1;
   --accent: #62b6ff; --accent2: #dbe9ff;
-  --tex: linear-gradient(rgba(98, 182, 255, .085) 1px, transparent 1px), linear-gradient(90deg, rgba(98, 182, 255, .085) 1px, transparent 1px),
-         linear-gradient(rgba(98, 182, 255, .035) 1px, transparent 1px), linear-gradient(90deg, rgba(98, 182, 255, .035) 1px, transparent 1px);
+  --tex: linear-gradient(rgba(98, 182, 255, .045) 1px, transparent 1px), linear-gradient(90deg, rgba(98, 182, 255, .045) 1px, transparent 1px),
+         linear-gradient(rgba(98, 182, 255, .018) 1px, transparent 1px), linear-gradient(90deg, rgba(98, 182, 255, .018) 1px, transparent 1px);
   --ts: 48px 48px, 48px 48px, 12px 12px, 12px 12px;
 }
 body.proj { background: var(--tex), var(--bg); background-size: var(--ts); background-attachment: fixed; }
@@ -57,13 +62,13 @@ body.proj { background: var(--tex), var(--bg); background-size: var(--ts); backg
 .t-pcb .chips li::before { content: ""; display: inline-block; width: 5px; height: 5px; border-radius: 50%; border: 1.5px solid var(--accent); margin-right: 6px; vertical-align: 1px; }
 .t-print .chips li { border-radius: 4px; background: repeating-linear-gradient(180deg, rgba(255, 255, 255, .035) 0 1px, transparent 1px 3px), var(--bg2); }
 
-/* project header with visualization */
-.phead { display: grid; grid-template-columns: minmax(0, 1fr) 360px; gap: 28px; align-items: end; }
-@media (max-width: 1180px) { .phead { grid-template-columns: 1fr; gap: 20px; } .phead .viz { max-width: 540px; } }
-.viz { position: relative; height: 210px; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: var(--tex), var(--bg2); background-size: var(--ts); user-select: none; }
-.viz svg { width: 100%; height: 100%; display: block; }
-.viz text { font-family: var(--mono); }
-.viz .cap { font-size: 9.5px; fill: var(--muted); }
+/* project header: faint static drawing behind the title */
+.phead { position: relative; isolation: isolate; }
+.phead .phtext { max-width: 760px; }
+.phead::before { content: ""; position: absolute; z-index: -1; right: -40px; top: -36px; width: 640px; height: 360px; pointer-events: none;
+  background: var(--motif) no-repeat right top / contain; opacity: .45;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 45%); mask-image: linear-gradient(90deg, transparent, #000 45%); }
+@media (max-width: 900px) { .phead::before { width: 420px; height: 236px; opacity: .35; right: -60px; } }
 
 /* sections */
 .psec { position: relative; }
@@ -71,7 +76,10 @@ body.proj { background: var(--tex), var(--bg); background-size: var(--ts); backg
 .shead h2 { margin: 6px 0 0; }
 .psec.own, .hsec { background: var(--tex), color-mix(in srgb, var(--bg) 92%, #000); background-size: var(--ts); border: 1px solid var(--line); border-radius: 14px; padding: 4px 24px 22px; margin: 40px 0; }
 .psec.own .shead { margin-top: 20px; }
-.hsec { margin: 64px auto 0; }
+.hsec { margin: 64px auto 0; position: relative; isolation: isolate; overflow: hidden; }
+.hsec::before { content: ""; position: absolute; z-index: -1; right: -30px; top: -20px; width: 420px; height: 236px; pointer-events: none;
+  background: var(--motif) no-repeat right top / contain; opacity: .3;
+  -webkit-mask-image: linear-gradient(200deg, #000 30%, transparent 80%); mask-image: linear-gradient(200deg, #000 30%, transparent 80%); }
 .hsec > .shrow { margin: 18px 0 20px; }
 .stag { font: 500 11.5px/1.4 var(--mono); color: var(--muted); letter-spacing: .02em; display: inline-flex; align-items: center; gap: 8px; flex-wrap: wrap; }
 .stag b { color: var(--accent); font-weight: 600; }
@@ -144,10 +152,7 @@ body.proj { counter-reset: fig; }
 .prose .gitlog .hash { font: 600 12.5px var(--mono); color: var(--str); background: none; padding: 0; }
 .gitlog h3 + p em { font: 12.5px var(--mono); font-style: normal; color: var(--muted); }
 
-/* home: about with molecule */
-.about .viz { float: right; width: 300px; height: 220px; margin: 6px 0 14px 22px; touch-action: pan-y; cursor: grab; }
-.about .viz:active { cursor: grabbing; }
-@media (max-width: 700px) { .about .viz { float: none; width: 100%; margin: 0 0 16px; } }
+/* home: about */
 .hsec.t-lab blockquote { border-left-color: var(--accent); color: var(--text); font-size: 18px; }
 
 /* home: contact as a pin header */
@@ -157,73 +162,6 @@ body.proj { counter-reset: fig; }
 .pinout li:first-child::before { border-radius: 3px; }
 .pinout li::after { content: ""; position: absolute; left: 24px; top: 10px; width: 32px; height: 2px; background: var(--accent); opacity: .7; }
 
-/* viz: print */
-.viz .glbg { fill: rgba(0, 0, 0, .35); }
-.viz .gl text { font-size: 9px; fill: #cdbfae; }
-.viz .gl text.cm { fill: #7d7366; }
-.viz .hl { fill: color-mix(in srgb, var(--accent) 22%, transparent); }
-.viz .bed { fill: #221c17; stroke: #3a3029; }
-.viz .bedl { stroke: #2d251f; stroke-width: .6; }
-.viz line.outer { stroke: #ff8f3a; stroke-width: 1.8; stroke-linecap: round; }
-.viz line.inner { stroke: #ffd166; stroke-width: 1.5; stroke-linecap: round; }
-.viz line.fill { stroke: #d65f3c; stroke-width: 1.05; stroke-linecap: round; }
-.viz line.travel { stroke: #5ab0ff; stroke-width: .6; stroke-dasharray: 2 2; }
-.viz .old line.outer { stroke: #9b5223; } .viz .old line.inner { stroke: #9a7a33; } .viz .old line.fill { stroke: #7a3a27; }
-.viz .noz path { fill: #e8eaed; filter: drop-shadow(0 0 4px rgba(255, 143, 58, .8)); }
-
-/* viz: pcb */
-.viz .board { fill: #0e2a1e; stroke: #2f6b4f; stroke-width: 1.5; }
-.viz .hole { fill: var(--bg); stroke: #c9a15f; stroke-width: 2.5; }
-.viz .tr { fill: none; stroke: #b9864a; stroke-opacity: .8; stroke-width: 2; stroke-linejoin: round; }
-.viz .sig { fill: none; stroke: #ffe2a8; stroke-width: 2.2; stroke-linecap: round; stroke-dasharray: 14 300; animation: sig 3s linear infinite; filter: drop-shadow(0 0 3px #ffb347); }
-@keyframes sig { from { stroke-dashoffset: 314; } to { stroke-dashoffset: 0; } }
-.viz .via { fill: #0e2a1e; stroke: #d8a860; stroke-width: 2; }
-.viz .pad { fill: #d9ae6a; }
-.viz .th { fill: #0e2a1e; stroke: #d9ae6a; stroke-width: 3; }
-.viz .res { fill: #1b1b1b; }
-.viz .ic { fill: #15171a; stroke: #2b2f35; }
-.viz .pin1 { fill: #3a3f46; }
-.viz .icl { fill: #8c939c; font-size: 7px; text-anchor: middle; letter-spacing: .08em; }
-.viz .icl.sm { font-size: 5.5px; }
-.viz .silk text { fill: #e8efe9; font-size: 8px; opacity: .85; }
-.viz .silk .bt { font-size: 7.5px; letter-spacing: .06em; }
-
-/* viz: code */
-.viz .ed { height: 100%; display: flex; flex-direction: column; background: #0b0f14; }
-.viz .tabs { display: flex; font: 11px var(--mono); border-bottom: 1px solid var(--line); background: #10151c; }
-.viz .tabs span { padding: 6px 12px; color: var(--muted); border-right: 1px solid var(--line); }
-.viz .tabs .on { color: var(--text); background: #0b0f14; box-shadow: inset 0 2px 0 var(--accent); }
-.viz .eb { display: flex; flex: 1; overflow: hidden; }
-.viz pre { margin: 0; padding: 8px 0; font: 11.5px/1.6 var(--mono); }
-.viz .gut { color: #3e4857; text-align: right; padding: 8px 10px 8px 12px; user-select: none; }
-.viz .src { color: #d6deeb; white-space: pre-wrap; padding-right: 10px; }
-.viz .kw { color: #c792ea; } .viz .fn { color: #82aaff; } .viz .str { color: #ecc48d; } .viz .cm { color: #637777; font-style: italic; }
-.viz .caret { display: inline-block; width: 7px; height: 13px; background: var(--accent); vertical-align: -2px; animation: blink 1s steps(1) infinite; }
-@keyframes blink { 50% { opacity: 0; } }
-
-/* viz: lab */
-.viz .bond { stroke: #8a93a6; stroke-width: 3; stroke-linecap: round; }
-.viz .atom { stroke: rgba(0, 0, 0, .35); stroke-width: .6; }
-
-/* viz: cad */
-.viz .frame { fill: none; stroke: var(--accent); stroke-opacity: .55; stroke-width: .8; }
-.viz .ol { fill: none; stroke: #dbe9ff; stroke-width: 1.3; stroke-dasharray: 1; stroke-dashoffset: 1; animation: draw 1.8s ease-out forwards; }
-.viz .face { fill: rgba(98, 182, 255, .07); }
-.viz .cl { stroke: #62b6ff; stroke-width: .6; stroke-dasharray: 8 2 2 2; opacity: 0; animation: fade .6s 1.4s forwards; }
-.viz .hid { stroke: #dbe9ff; stroke-width: .7; stroke-dasharray: 3 2; opacity: 0; animation: fade .6s 1.4s forwards; }
-.viz .dim { stroke: #62b6ff; stroke-width: .55; opacity: 0; animation: fade .6s 1.7s forwards; }
-.viz .ar { fill: #62b6ff; opacity: 0; animation: fade .6s 1.7s forwards; }
-.viz .dt { fill: #9fc9ff; font-size: 8px; opacity: 0; animation: fade .6s 1.9s forwards; }
-.viz .tl { fill: #62b6ff; font-size: 5.5px; letter-spacing: .08em; }
-.viz .tv { fill: #dbe9ff; font-size: 8px; font-weight: 600; }
-@keyframes draw { to { stroke-dashoffset: 0; } }
-@keyframes fade { to { opacity: 1; } }
-.viz svg.done .ol { animation: none; stroke-dashoffset: 0; stroke-dasharray: none; }
-.viz svg.done :is(.cl, .hid, .dim, .ar, .dt) { animation: none; opacity: 1; }
-
 @media (prefers-reduced-motion: reduce) {
-  .viz *, .viz .caret { animation: none !important; }
-  .viz .ol { stroke-dashoffset: 0; stroke-dasharray: none; }
-  .viz :is(.cl, .hid, .dim, .ar, .dt) { opacity: 1; }
   .card { transition: none; }
 }

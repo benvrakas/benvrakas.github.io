@@ -174,10 +174,6 @@ def wrap_sections(content, pt):
     return ''.join(out)
 
 
-def viz(theme, title='', years='', tags=(), slug='', seed=7):
-    return (f'<div class="viz" data-viz="{theme}" data-title="{html.escape(title)}" data-years="{html.escape(years)}" '
-            f'data-tags="{html.escape("|".join(tags))}" data-slug="{slug}" data-seed="{seed}" aria-hidden="true"></div>')
-
 
 def page(title, body, prefix='', desc='', og_image='', active='', page_path='', color='#0d0f12'):
     nav = ''.join(f'<a href="{prefix + u}">{n}</a>' for n, u in NAV)
@@ -213,7 +209,6 @@ def page(title, body, prefix='', desc='', og_image='', active='', page_path='', 
 <span><a href="https://github.com/benvrakas">GitHub</a> · <a href="https://www.printables.com/@VLabs_256532">Printables</a> · <a href="https://www.thingiverse.com/benvrakas/designs">Thingiverse</a> · <a href="https://ficsit.app/user/benvrakas">ficsit.app</a> · <a href="https://www.youtube.com/channel/UC1nUGgfhgWf4mYUwQ9nH5FQ">YouTube</a></span></div></footer>
 <div id="lightbox" hidden><button class="lbx" aria-label="Close">×</button><button class="lbp" aria-label="Previous">‹</button><figure><img alt=""><figcaption></figcaption></figure><button class="lbn" aria-label="Next">›</button></div>
 <script src="{prefix}site.js" defer></script>
-<script src="{prefix}viz.js" defer></script>
 </body>
 </html>
 '''
@@ -282,7 +277,7 @@ def build_project(p, projects):
 <p class="lede">{html.escape(p.get("summary", ""))}</p>
 {chips(p["tags"])}
 {links_html(p.get("links"))}
-</div>{viz(t, p["title"], p.get("years", ""), p["tags"][:3], slug, int(p["order"] * 7) + 3)}</header>
+</div></header>
 {hero}
 <div class="prose">{content}</div>
 {pager}
@@ -341,7 +336,7 @@ def build_home(projects):
 <section id="timeline" class="wrap hsec t-print">{head("Timeline", f";LAYER_COUNT:{len(tl)}")}{timeline}</section>
 <section id="experience" class="wrap narrow hsec t-code prose">{head("Experience", '$ git log --author="Ben Vrakas"')}<div class="gitlog">{exp}</div></section>
 <section id="about" class="wrap narrow hsec t-lab prose">{head("About", '<span class="elem"><sup>23</sup><b>V</b><sub>V-Labs</sub></span>')}
-<div class="about">{viz("lab", seed=23)}{md(sec.get("about", ""))}</div></section>
+<div class="about">{md(sec.get("about", ""))}</div></section>
 <section id="contact" class="wrap narrow hsec t-pcb prose pinout">{head("Contact & elsewhere", "<b>J1</b><i></i>NET_CONTACT")}{md(sec.get("contact", ""))}</section>'''
     return page('Ben Vrakas · Mechanical design, electronics & software', out, '', meta.get('intro', ''), hero_img, 'home', '')
 
